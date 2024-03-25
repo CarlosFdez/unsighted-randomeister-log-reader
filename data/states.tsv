@@ -1,0 +1,119 @@
+id	name	scene
+0	RockBlock_RockBlock (2)_Broken	SuburbsGardenConnection
+1	RockBlock_RockBlock (3)_Broken	SuburbsGardenConnection
+2	RockBlock_RockBlock_Broken	SuburbsGardenConnection
+3	RockBlock_RockBlock (1)_Broken	SuburbsGardenConnection
+4	KeyDoor_KeyDoorHorizontal_Up_Open	DowntownPushPuzzle
+5	RockBlock_RockBlock33333 (1)_Broken	MuseumEntrance
+6	RockBlock_RockBlock_Broken	AquariumNorthCorridor
+7	RockBlock_RockBlock (1)_Broken	AquariumNorthCorridor
+8	RockBlock_RockBlock (1)_Broken	AquariumMiniboss
+9	RockBlock_RockBlock_Broken	AquariumMiniboss
+10	RockBlock_RockBlock_Broken	AquariumHorizontalTube1
+11	RockBlock_RockBlock (1)_Broken	AquariumHorizontalTube1
+12	RockBlock_RockBlock (2)_Broken	AquariumHorizontalTube1
+13	RockBlock_RockBlock (6)_Broken	AquariumHorizontalTube1
+14	RockBlock_RockBlock (3)_Broken	AquariumHorizontalTube1
+15	KeyDoor_KeyDoorVertical_Right_Open	AquariumCentralRoom
+16	RockBlock_RockBlock_Broken	SuburbsRailsGrindRoom
+17	RockBlock_RockBlock (1)_Broken	SuburbsRailsGrindRoom
+18	RockBlock_RockBlock (6)_Broken	AquariumStreet
+19	RockBlock_RockBlock (1)_Broken	AquariumStreet
+20	RockBlock_RockBlock_Broken	AquariumStreet
+21	RockBlock_RockBlock (2)_Broken	MuseumEntranceF2
+22	RockBlock_RockBlock (3)_Broken	MuseumEntranceF2
+23	RockBlock_RockBlock_Broken	DowntownFinalPuzzle
+24	RockBlock_RockBlock_Broken	DowntownCliff
+25	RockBlock_RockBlock (1)_Broken	DowntownTerminal
+26	RockBlock_RockBlock_Broken	DowntownTerminal
+27	RockBlock_RockBlock_Broken	DowntownBallPuzzle
+28	RockBlock_RockBlock (2)_Broken	DowntownCraterTowerEntrance
+29	RockBlock_RockBlock (1)_Broken	DowntownCraterTowerEntrance
+30	SafeDoor_SafeDoor (1)_Broken	FactoryMissileRoom
+31	SafeDoor_SafeDoor_Broken	FactoryLavaButtonRoom
+32	SafeDoor_SafeDoor_Broken	FactoryPreBossRoom
+33	EnergyPlatform (1)_Active	GardenDeepForest
+34	EnergyPlatform (1)_Inactive	GardenDeepForest
+35	EnergyPlatform (2)_Inactive	GardenDeepForest
+36	EnergyPlatform_Inactive	GardenDeepForest
+37	EnergyPlatform (3)_Inactive	GardenDeepForest
+38	RockBlock_RockBlock (4)_Broken	AquariumStreet
+39	RockBlock_RockBlock33333_Broken	MuseumEntrance
+40	EnergyPlatform_Inactive	DowntownBallPuzzle
+41	EnergyPlatform_Active	DowntownBallPuzzle
+42	Barrier_Gone	DowntownBallPuzzle
+43	Barrier_Gone	GlobalGameManagerScene
+44	BoxPositionSaveTrigger_Saved	DowntownPushPuzzle
+45	BoxPositionSaveTrigger_Saved	AquariumEntrance
+46	KeyDoor_KeyDoorHorizontal_Up_Open	SuburbsRailsLibraryEntrance
+47	RockBlock_RockBlock (2)_Broken	SuburbsRailsLibraryEntrance
+48	Barrier_Gone	MuseumMoonDeviceCorridor
+49	Barrier_Gone	MuseumKeyRoom
+50	RockBlock_RockBlock (1)_Broken	MuseumEntranceF2
+51	BoxPositionSaveTrigger (1)_Saved	MuseumMoonDeviceCorridor
+52	BoxPositionSaveTrigger (2)_Saved	MuseumMoonDeviceCorridor
+53	KeyDoor_KeyDoorHorizontal_Up_Open	MuseumDarkRailRoom
+54	BoxPositionSaveTrigger (1)_Saved	MuseumLibraryConnection
+55	PrologueOver	
+56	Prologue	
+57	HighwaysPoles_RedDown	
+58	HighwaysPoles_BlueDown	
+59	Highways_RedPolesDown	
+60	Highways_BluePolesDown	
+61	MuseumLight_On	
+62	MuseumLight_Off	
+63	BoxPositionSaveTrigger_Saved	AquariumStreet
+64	KeyDoor_KeyDoorHorizontal_Down_Open	AquariumIceBlockPuzzle4
+65	Barrier_Gone	AquariumIceBlockPuzzle3
+66	Barrier_Gone	GardenJumpCorridor2
+67	Barrier 2_Gone	GardenJumpCorridor2
+68	RockBlock_RockBlock (1)_Broken	DowntownFinalPuzzle
+69	RockBlock_RockBlock (1)_Broken	DowntownAxeRoom
+70	SafeDoor_SafeDoor (4)_Broken	FactoryMissileRoom
+71	SafeDoor_SafeDoor (3)_Broken	FactoryMissileRoom
+72	Barrier_Gone	CavesPond
+73	KeyDoor_KeyDoorHorizontal_Up_Open	CavesEntrance
+74	KeyDoor_KeyDoorHorizontal_Down_Open	AquariumCentralRoom
+75	RockBlock_RockBlock_Broken	AquariumCentralRoom
+76	KeyDoor_KeyDoorVertical_Right_Open	FactoryEntrance
+77	Barrier_Gone	FactoryPuzzle1
+78	Barrier_Gone	ChurchDarkMonsterRoom
+79	RockBlock_RockBlock_Broken	DowntownCraterTowerEntrance
+80	Barrier_Gone	GardenDeepForest
+81	EnergyPlatform (2)_Active	GardenDeepForest
+82	EnergyPlatform_Active	GardenDeepForest
+83	EnergyPlatform (3)_Active	GardenDeepForest
+84	RockBlock_RockBlock (2)_Broken	MuseumLabyrinth
+85	BoxPositionSaveTrigger_Saved	AquariumWestElevator
+86	Barrier_Gone	DowntownJumpRoom
+87	SafeDoor_SafeDoor_Broken	FactoryMuseumConnection
+88	SafeDoor_SafeDoor (1)_Broken	FactoryMuseumConnection
+89	Barrier_Gone	DowntownChurch
+90	RockBlock_RockBlock (1)_Broken	LabAirDucts
+91	RockBlock_RockBlock (3)_Broken	MuseumLabyrinth
+92	Barrier_Gone	CavesNestRoom
+93	Barrier_Gone	SuburbsRailsGrindRoom
+94	EnergyPlatform (1)_Active	SuburbsFillRoom1
+95	EnergyPlatform (1)_Inactive	SuburbsFillRoom1
+96	EnergyPlatform (2)_Active	SuburbsFillRoom1
+97	EnergyPlatform (2)_Inactive	SuburbsFillRoom1
+98	RockBlock_RockBlock (5)_Broken	SuburbsRailsEntrance
+99	RockBlock_RockBlock (6)_Broken	SuburbsRailsEntrance
+100	RockBlock_RockBlock_Broken	SuburbsRailsEntrance
+101	RockBlock_RockBlock_Broken	SuburbsTerminal
+102	RockBlock_RockBlock (1)_Broken	SuburbsTerminal
+103	RockBlock_RockBlock (3)_Broken	AquariumStreet
+104	RockBlock_RockBlock (2)_Broken	AquariumLake
+105	Barrier_Gone	MuseumOptionalRail
+106	Barrier_Gone	DowntownMiniboss1
+107	RockBlock_RockBlock (5)aaa_Broken	DowntownChurch
+108	RockBlock_RockBlock_Broken	LabAirDucts
+109	EnergyPlatform_Active	GardenShurikenCorridor1
+110	EnergyPlatform_Inactive	GardenShurikenCorridor1
+111	Barrier_Gone	DowntownIndustrialZoneEntrance
+112	RockBlock_RockBlock (1)aaaaa_Broken	ToyRoom
+113	EnergyPlatform_Active	CavesFactory2
+114	EnergyPlatform_Inactive	CavesFactory2
+115	RockBlock_RockBlock (1)_Broken	CavesFactory2
+116	RockBlock_RockBlock (1)_Broken	DowntownCliff
+117	Barrier_Gone	SuburbsRailsChipCopyEntrance

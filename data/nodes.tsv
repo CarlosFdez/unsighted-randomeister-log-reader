@@ -1,0 +1,854 @@
+id	scene	location	x	y	height	actions	states
+0	DowntownCraterTowerGates	Terminal	0	-1.67	0		
+1	GardenVillage	Terminal	-12.4568	-18.17184	0		
+2	GardenVillage	ScreenTransition_Left_0	-66.59	-26.2	0		
+3	GardenDeepForest	ScreenTransition_Right_0	48.64	-13.57	0		
+4	GardenDeepForest	MetalScrap 2_6	10.28	-35.26	0		
+5	GardenDeepForest	MetalScrap 2 (2)_8	-36.5	11.54	2		
+6	GardenVillage	ScreenTransition_Right_0	59.29	-11.03	0		
+7	GardenShurikenCorridor2	ScreenTransition_Left_0	-22.1	-53.25	0		
+8	FactoryTerminal	Terminal	2.4	46.14	0		
+9	GardenVillage	GrandmaNPC	32.85106	3.544173	0		
+10	GardenFakeBossRoom	Terminal	-28.59	-9.2	0		
+11	GardenFakeBossRoom	ScreenTransition_Up_0	-8.2	6.35	0		
+12	SuburbsGardenConnection	ScreenTransition_Down_0	1.41	-66.43	0		
+13	SuburbsGardenConnection	RockBlock_RockBlock (1)	-3.5	38.93	0		
+14	SuburbsGardenConnection	ScreenTransition_Up_0	-7.1	48.43	0		
+15	SuburbsAquariumConnection	ScreenTransition_Down_0	-10.44	15.81	0		
+16	LabStartingRoom	New Game	63.78356	4.637094	0		
+17	LabStartingRoom	SeringueCollectable	47.5	2.09	0		
+18	LabStartingRoom	ScreenTransition_Down_0	50.27	-19.19	0		
+19	LabWestWing	ScreenTransition_Up_0	31.15	13.41	0		
+20	LabWestWing	ScreenTransition_Right_0	79.83	2.6	0		
+21	LabEastWing	ScreenTransition_Left_0	22.32	2.35	0		
+22	LabEastWing	ScreenTransition_Down_0	65.67	-13.82	0		
+23	LabElevatorRoom	ScreenTransition_Up_0	-64.55	10.71	0		
+24	LabElevatorRoom	Elevator_0	-53.14	-1.85	0		
+25	DowntownCliff	Elevator_0	13.9	-38.8	0		
+26	DowntownCliff	ScreenTransition_Up_0	-72.34	-33.27	0		
+27	DowntownTerminal	ScreenTransition_Down_0	4.98	-41.24	0		
+28	DowntownTerminal	Terminal	2.43	-23.18	0		
+29	DowntownTerminal	ScreenTransition_Up_0	-1.15	-6.94	0		
+30	DowntownPushPuzzle	ScreenTransition_Down_0	9.96	-46.96	0		
+31	DowntownPushPuzzle	ScreenTransition_Left_0	-64.96	3	0		
+32	DowntownBallPuzzle	ScreenTransition_Right_0	56.01	-12.1	0		
+33	DowntownBallPuzzle	KeyChest	30.99	18.17	3		
+34	DowntownPushPuzzle	ScreenTransition_Up_0	14.18	28.17	0		
+35	DowntownMiniboss1	ScreenTransition_Down_0	-23.3	-78.19	0		
+36	DowntownTerminal	OffscreenChest	-19.30949	-22.64	0		
+37	DowntownPushPuzzle	KeyDoor_KeyDoorHorizontal_Up	13.97	10.14723	0		
+38	LabEastWing	ScreenTransition_Up_0	70.09	13.25	0		
+39	LabSwordRoom	ScreenTransition_Down_0	67.38	-11.35	0		
+40	LabSwordRoom	IronEdgeChest	45	8.18	0		
+41	LabSwordRoom	MetalScrap 1_13	40.18	-2.93	0		
+42	LabEastWing	MetalScrap 1_18	75.02	-3.26	0		
+43	LabWestWing	MetalScrap 1_12	59.81	-16.19	0		
+44	LabWestWing	ScreenTransition_Left_0	13.75	-0.64	0		
+45	LabDoctorsRoom	ScreenTransition_Right_0	78.76	-10.1	0		
+46	LabElevatorRoom	MetalScrap 1_12	-65.1	-6	0		
+47	DowntownCliff	MetalScrap 1_19	-67.38	-41.6	3		
+48	DowntownCliff	MetalScrap 1 (1)_20	-81.05	-39.1	3		
+49	DowntownCliff	MetalScrap 1 (2434_24	-38.5	-55	0		
+50	DowntownPushPuzzle	Chest	-53.32	-12.83	3		
+51	DowntownBallPuzzle	ScreenTransition_Left_0	-24.02	11.24	0		
+52	DowntownSecretDeadend	ScreenTransition_Right_0	0.98	14.63	0		
+53	DowntownSecretDeadend	DeadendChest	-12.74	16.01	6		
+54	DowntownPushPuzzle	ScreenTransition_Right_0	39.74	-7.19	0		
+55	DowntownCraterTowerEntrance	ScreenTransition_Left_0	-35.97	-39.31	0		
+56	DowntownCraterTowerEntrance	DarkMonsterCraterCutscene	-1.5	-12	0		
+57	DowntownCraterTowerEntrance	Vana_Flameblade	-1.5	-12	0		
+58	Blacksmith	BlacksmithCutscene	4.75	-2.53	0		
+59	Blacksmith	Elevator_0	-16.5	-4	0		
+60	Headquarters	Elevator_0	-16.19	-4	0		
+61	Headquarters	ScreenTransition_Down_0	-5.12	-13.23	0		
+62	GardenVillage	ScreenTransition_Up_0	-4.31	0	0		
+63	GardenVillage	RooftopChest	13.55	-11.485	5.5		
+64	GardenVillage	ScreenTransition_Up_3	8.2	-12.59	0		
+65	GeneralShop	ScreenTransition_Down_0	-7.98	-13.23	0		
+66	GeneralShop	GeneralShopNPC	-2.388313	0.6840454	0		
+67	GardenVillage	ScreenTransition_Up_4	1.94	-28.96	0		
+68	WeaponShop	ScreenTransition_Down_0	-8.58	-14.08	0		
+69	WeaponShop	WeaponShopNPC	-11.45606	-4.755405	0		
+70	GardenVillage	ScreenTransition_Up_6	-24.37	-28.63	0		
+71	Gym	ScreenTransition_Down_0	-3.57	-30.07	0		
+72	GardenVillage	ScreenTransition_Up_5	-34.8	-14.5	0		
+73	ChipShop	ScreenTransition_Down_0	-8.54	-12.58	0		
+74	ChipShop	ChipNPC	-3.884245	-4.948574	0		
+75	GardenDeepForest	ScreenTransition_Left_0	-103.27	-20.76	0		
+76	GardenWestArea	ScreenTransition_Right_0	-0.43	-2.13	0		
+77	GardenWestArea	FirstDustChest	-30.64	29.3	0		
+78	GardenDeepForest	ScreenTransition_Down_0	-3.25	-58.62	0		
+79	GardenSouthCaveEntrance	ScreenTransition_Up_0	28.74	5.67	0		
+80	GardenSouthCaveEntrance	ScreenTransition_Up_1	-11.94	0.39	0		
+81	CavesEntrance	ScreenTransition_Down_0	-0.01	-10.75	0		
+82	CavesEntrance	Terminal	0.17	3.83	0		
+83	GardenSouthCaveEntrance	ScreenTransition_Right_0	40.93	-20.48	0		
+84	GardenShurikenPuzzle1	ScreenTransition_Left_0	-54.52	-32.29	0		
+85	GardenShurikenPuzzle1	MetalScrap 1_0	-9	-15	0		
+86	GardenShurikenPuzzle1	MetalScrap 1 (1)_5	31.79	-23.53	0		
+87	GardenShurikenPuzzle1	ScreenTransition_Right_0	59.58	3.61	0		
+88	GardenShurikenPuzzle2	ScreenTransition_Left_0	-76.62	-4.22	0		
+89	GardenShurikenPuzzle2	ScreenTransition_Right_0	66.57	2.86	0		
+90	GardenCorruptedArea	ScreenTransition_Left_0	-77.39	-5.96	0		
+91	GardenShurikenPuzzle1	ScreenTransition_Up_0	6.85	15.66	0		
+92	GardenVillage	ScreenTransition_Down_0	-11.47	-66.7	0		
+93	GardenShurikenPuzzle2	ScreenTransition_Up_0	-63.59	20.94	0		
+94	GardenShurikenCorridor2	ScreenTransition_Down_0	29.13	-82.1	0		
+95	GardenVillage	LakeChest	39.43	-31.94	0		
+96	GardenVillage	WaterfallChest1	18.89	33.58	0		
+97	GardenVillage	MetalScrap 2333_3	26.39	33.7	0		
+98	GardenShurikenCorridor2	LakeChest	92.66	-42.91	0		
+99	GardenShurikenCorridor2	ScreenTransition_Right_0	102.13	-23.67	0		
+100	GardenShurikenCorridor1	ScreenTransition_Left_0	-14.26	-6.68	0		
+101	GardenShurikenCorridor1	MetalScrap 2 (2)_2	54.65	-26.82	0		
+102	GardenShurikenCorridor1	HiddenGardenChest	51.61	-45.64	0		
+103	GardenShurikenCorridor1	ScreenTransition_Up_0	76.62	26.51	0		
+104	GardenFakeBossRoom	ScreenTransition_Down_0	-8.73	-32.16	0		
+105	GardenShurikenCorridor2	ScreenTransition_Up_0	-2.77	5.56	0		
+106	GardenNorthCaveEntrance	ScreenTransition_Down_0	50.6	-28.02	0		
+107	GardenNorthCaveEntrance	ScreenTransition_Up_0	-12.26	0.6	0		
+108	CavesNorthEntrance	ScreenTransition_Down_0	1.74	5.43	0		
+109	CavesNorthEntrance	Terminal	1.61	19.86	0		
+110	CavesNorthEntrance	CraftingTable	-7.52	15.19	0		
+111	CavesNorthEntrance	ScreenTransition_Left_0	-18.59	20.75	0		
+112	CavesShurikenRoom	ScreenTransition_Right_0	25.69	80.03	0		
+113	GardenNorthCaveEntrance	ArmadilloNPC	-9.314832	-20.16637	0		
+114	GardenNorthCaveEntrance	ScreenTransition_Left_0	-36.6	-5.56	0		
+115	GardenJumpCorridor2	ScreenTransition_Right_0	40.09	7.97	0		
+116	GardenJumpCorridor2	GhoulChest	5.375561	25.61626	0		
+117	GardenJumpCorridor2	RiverChest	12.74	40.43	0		
+118	GardenJumpCorridor2	DustChest	-34.15	-26.73	0		
+119	GardenJumpCorridor2	ScreenTransition_Up_0	-86.42	14.11	0		
+120	SuburbsDowntownConnection	ScreenTransition_Down_0	21.8	-14.11	0		
+121	SuburbsDowntownConnection	GhoulAlleyChest	65.63	15.64	0		
+122	SuburbsDowntownConnection	MetalScrap 1 (1)_0	32.91	16.18	0		
+123	SuburbsDowntownConnection	ScreenTransition_Up_0	18.68	45.57	0		
+124	SuburbsMuseumConnection	ScreenTransition_Down_0	6.94	-0.49	0		
+125	SuburbsMuseumConnection	ScreenTransition_Up_0	-8.12	49.29	0		
+126	MuseumStreet	ScreenTransition_Down_0	-26.87	-23.39	0		
+127	MuseumStreet	DustChest	20.08455	17.20835	0		
+128	MuseumStreet	MetalScrap 1 (2)_16	-61.11	-10.57	0		
+129	MuseumStreet	ScreenTransition_Up_1	-19.23	19.89	0		
+130	MuseumEntranceF2	ScreenTransition_Down_1	14.01	-43.6	0		
+131	MuseumEntranceF2	TopEntranceChest	14.11908	-19.17207	0		
+132	MuseumStreet	ScreenTransition_Up_0	-26.05	11.89	0		
+133	MuseumEntrance	ScreenTransition_Down_0	0.3	-65.34	0		
+134	MuseumEntrance	Terminal	10.8	-48.2	0		
+135	MuseumEntrance	RockBlock_RockBlock33333 (1)	12.65	-19.6	0		
+136	MuseumEntrance	DustChest	21.23965	-19.17237	0		
+137	MuseumEntrance	ScreenTransition_Right_0	24.92	-5.6	0		
+138	MuseumCircularRailRoom	ScreenTransition_Left_0	-29.81	-32.33	0		
+139	MuseumCircularRailRoom	ReviveChest	103.8987	-27.46359	0		
+140	MuseumCircularRailRoom	MetalScrap 1 (1)_0	106.25	-22.3	0		
+141	MuseumCircularRailRoom	ScreenTransition_Up_0	133.25	25.6	0		
+142	MuseumKeyRoom2	ScreenTransition_Down_0	-6.19	-69.37	0		
+143	MuseumEntrance	ScreenTransition_Left_0	-24.63	-5.2	0		
+144	MuseumMoonDeviceCorridor	ScreenTransition_Right_0	22.9	-28.39	0		
+145	MuseumMoonDeviceCorridor	ScreenTransition_Down_0	-61.8	-50.1	0		
+146	MuseumKeyRoom	ScreenTransition_Up_0	8.75	-6.94	0		
+147	MuseumKeyRoom	Elevator_0	17.83	-33.91	0		
+148	MuseumKeyRoomF2	Elevator_0	17.83	-35.91	0		
+149	MuseumKeyRoomF2	Chest	-3.94	-18.15	4		
+150	MuseumKeyRoomF2	HoleTeleporter_0	-0.5	-29	-3		
+151	MuseumKeyRoom	HoleTeleporter_0	-8.88	-25.46	16		
+152	MuseumKeyRoom	MuseumKey1	-5.9	-30.81	0		
+153	MuseumMoonDeviceCorridor	HoleTeleporter_0	-42	-50.5	-3		
+154	MuseumBasement	HoleTeleporter_0	5.54	-23.25	16		
+155	MuseumBasement	UltraSecretBasementChest	-65.94	4.82	0		
+156	MuseumBasement	ScreenTransition_Right_0	22.92	-23.07	0		
+157	MuseumWaterRoom	ScreenTransition_Left_0	-26.44	-41.89	0		
+158	MuseumWaterRoom	ScreenTransition_Up_0	28.68	-17.95	0		
+159	MuseumBasementSecret	ScreenTransition_Down_0	-3.7	-61.24	0		
+160	MuseumBasementSecret	MeteorDustChest	-3.49	-29.47	0		
+161	MuseumWaterRoom	ArmadilloNPC	24.30099	-52.75505	0		
+162	MuseumWaterRoom	ScreenTransition_Right_0	50.97	-55.51	0		
+163	AquariumSpikeCorridor1	ScreenTransition_Left_0	11.05	31.43	0		
+164	AquariumSpikeCorridor1	ScreenTransition_Down_0	19.96	12.77	0		
+165	AquariumIceBlockPuzzle1	ScreenTransition_Up_0	-33.36	36.93	0		
+166	AquariumSpikeCorridor1	ScreenTransition_Up_0	52.47	42.19	0		
+167	AquariumVerticalTube1	ScreenTransition_Down_0	39.61	-11.84	0		
+168	AquariumVerticalTube1	ScreenTransition_Up_0	39.5	38	0		
+169	AquariumKeyRoom	ScreenTransition_Down_0	6.06	-16.59	0		
+170	AquariumKeyRoom	KeyChest	33.36	33.14	0		
+171	AquariumKeyRoom	ScreenTransition_Right_0	57.52	-14.21	0		
+172	AquariumNorthCorridor	ScreenTransition_Left_0	43.6	35.6	0		
+173	AquariumNorthCorridor	RockBlock_RockBlock	61.96	12.37	0		
+174	AquariumNorthCorridor	ScreenTransition_Down_0	64.61	-0.42	0		
+175	AquariumMiniboss	ScreenTransition_Up_0	53.84	54.28	0		
+176	AquariumMiniboss	IceGrenadeChest	33.4	41.86	0		
+177	AquariumNorthCorridor	RockBlock_RockBlock (1)	64.9	11.11	0		
+178	AquariumNorthCorridor	ScreenTransition_Right_0	100.68	27.06	0		
+179	AquariumNorthElevator	ScreenTransition_Left_0	43.6	35.48	0		
+180	AquariumNorthElevator	Chest	50.09514	16.87615	0		
+181	AquariumMiniboss	RockBlock_RockBlock (1)	82.93	40.58	0		
+182	AquariumMiniboss	RockBlock_RockBlock	79.98	42.88	0		
+183	AquariumMiniboss	ScreenTransition_Right_0	94.3	42.34	0		
+184	AquariumWaterRoom1	ScreenTransition_Left_0	-73.82	41.82	0		
+185	AquariumWaterRoom1	ScreenTransition_Right_0	-29.29	41.96	0		
+186	AquariumMapRoom	ScreenTransition_Left_0	0.93	18.08	0		
+187	AquariumWaterRoom1	ScreenTransition_Down_0	-64.61	15.8	0		
+188	AquariumCentralRoom	ScreenTransition_Up_0	5.1	13.76	0		
+189	MuseumEntrance	CraftingTable	-7.21	-48.92	0		
+190	SuburbsDowntownConnection	ScreenTransition_Right_0	81.04	30.46	0		
+191	SuburbsFillRoom1	ScreenTransition_Left_0	-39.23	30.31	0		
+192	SuburbsFillRoom1	SuburbsFillRoomChest	14.32	49.44	0		
+193	SuburbsFillRoom1	ScreenTransition_Right_0	24.24	30.19	0		
+194	SuburbsTerminal	ScreenTransition_Left_0	-6.03	32.53	0		
+195	SuburbsTerminal	Terminal	12.54	29.99	0		
+196	SuburbsTerminal	ScreenTransition_Right_0	29.69	31.74	0		
+197	SuburbsFillRoom2	ScreenTransition_Left_0	-46.89	30.87	0		
+198	SuburbsFillRoom2	MetalScrap 1_0	29.01	53.97	0		
+199	SuburbsFillRoom2	SuburbsFillRoom2Chest	40.83604	55.7	0		
+200	SuburbsFillRoom2	Elevator_0	3.31	52.31	0		
+201	SewersAquariumConnection	Elevator_0	52.65	-6.83	0		
+202	SewersAquariumConnection	SharkChest	-1.38	11.14	0		
+203	SewersAquariumConnection	ScreenTransition_Up_0	36.04	30.1	0		
+204	AquariumBlackoutCorridor	ScreenTransition_Down_0	79.4	-0.83	0		
+205	SewersAquariumConnection	ScreenTransition_Down_0	36.17	-45.96	0		
+206	CavesConnectionRoom	ScreenTransition_Up_0	-3.47	30.18	0		
+207	CavesConnectionRoom	ScreenTransition_Left_1	-36.94	17.37	0		
+208	CavesNorthEntrance	ScreenTransition_Right_0	32.1	21.95	0		
+209	AquariumBlackoutCorridor	ScreenTransition_Left_0	49.05	26.46	0		
+210	AquariumKeyRoom2	ScreenTransition_Right_0	70.13	26.39	0		
+211	AquariumBlackoutCorridor	ScreenTransition_Up_0	100.34	36.01	0		
+212	AquariumHorizontalTube1	ScreenTransition_Down_0	84	-1.8	0		
+213	AquariumHorizontalTube1	RockBlock_RockBlock	68.68	16.62	0		
+214	AquariumHorizontalTube1	RockBlock_RockBlock (1)	67.18	13.62	0		
+215	AquariumHorizontalTube1	RockBlock_RockBlock (2)	69.68	10.62	0		
+216	AquariumHorizontalTube1	RockBlock_RockBlock (6)	88.32	18.57	0		
+217	AquariumHorizontalTube1	RockBlock_RockBlock (3)	79.32	19.57	0		
+218	AquariumHorizontalTube1	ScreenTransition_Right_0	98.93	13.8	0		
+219	AquariumCentralRoom	ScreenTransition_Left_0	-31.22	-41.2	0		
+220	AquariumCentralRoom	MetalScrap 2_11	7.9	-23.5	0		
+221	AquariumCentralRoom	LeftRiverCurrentChest	-9.6	5	0		
+222	AquariumCentralRoom	KeyDoor_KeyDoorVertical_Right	72	15	0		
+223	AquariumBlackoutCorridor	MetalScrap 2_0	120.396	26.62181	0		
+224	AquariumBlackoutCorridor	Chest	131.9814	26.66511	0		
+225	AquariumKeyRoom2	MetalScrap 1 (1)_10	57	11.5	0		
+226	AquariumKeyRoom2	KeyChest	13.9628	12.11377	0		
+227	SuburbsFillRoom2	ScreenTransition_Right_0	47.3	30.6	0		
+228	SuburbsGardenConnection	ScreenTransition_Left_0	-52.07	4.29	0		
+229	SuburbsGardenConnection	Elevator_0	41.55	33.01	0		
+230	SuburbsRailsGrindRoom	Elevator_0	141.19	-72.3	0		
+231	SuburbsRailsGrindRoom	RockBlock_RockBlock	151.16	-76.27	0		
+232	SuburbsRailsGrindRoom	RockBlock_RockBlock (1)	151.16	-78.7	0		
+233	SuburbsRailsGrindRoom	Chest	173.91	-78.28	0		
+234	SuburbsGardenConnection	RockBlock_RockBlock (3)	-5.76	35.95	0		
+235	SuburbsGardenConnection	RockBlock_RockBlock (2)	-8.86	34.93	0		
+236	SuburbsGardenConnection	RockBlock_RockBlock	-10.31	37.94	0		
+237	SuburbsAquariumConnection	ScreenTransition_Up_0	-7.21	64.2	0		
+238	AquariumStreet	ScreenTransition_Down_0	-28.88	-31.9	0		
+239	AquariumStreet	RockBlock_RockBlock (6)	-17.13	-22.39	0		
+240	AquariumStreet	RockBlock_RockBlock (1)	-28.89	-13.08	0		
+241	AquariumStreet	RockBlock_RockBlock	27.38	20.07	0		
+242	AquariumStreet	HoleTeleporter_0	-28.13	20.7	6		
+243	AquariumEntrance	HoleTeleporter_0	46.05	12.77	16		
+244	AquariumEntrance	Terminal	46	4.5	0		
+245	AquariumEntrance	ScreenTransition_Right_0	70.34	35.25	0		
+246	AquariumEntranceCorridor	ScreenTransition_Left_0	31.91	15.9	0		
+247	AquariumEntrance	CraftingTableChest	20.29	37.62	0		
+248	AquariumEntrance	ScreenTransition_Left_0	11.87	34.77	0		
+249	MuseumOptionalRail	ScreenTransition_Right_0	174.03	-12.95	0		
+250	CavesShurikenRoom	ScreenTransition_Down_0	46.38	8.54	0		
+251	CavesCorridor	ScreenTransition_Up_0	19.9	53.01	0		
+252	CavesCorridor	Chest	14.6	41.52	4		
+253	CavesCorridor	ScreenTransition_Down_0	4.24	21.96	0		
+254	CavesMinecartPuzzleZero	ScreenTransition_Up_0	21.73	31.72	0		
+255	CavesCorridor	ScreenTransition_Right_0	56.56	40.16	0		
+256	CavesMinecartMainPuzzle	ScreenTransition_Left_0	-36.7	22.45	0		
+257	CavesConnectionRoom	ScreenTransition_Left_0	-27.9	-15.97	0		
+258	CavesNestRoom	ScreenTransition_Right_0	31.5	19	0		
+259	CavesNestRoom	DustChest	-1.918987	-19.2115	0		
+260	CavesConnectionRoom	ScreenTransition_Down_0	0.78	-34.91	0		
+261	CavesPond	ScreenTransition_Up_0	26.87	57.97	0		
+262	CavesPond	ScreenTransition_Left_0	-22.45	23.41	0		
+263	CavesMinecartBarrierPuzzle	ScreenTransition_Right_0	33.76	7.01	0		
+264	CavesPond	FishNPC	-6.007407	14.17	0		
+265	CavesPond	MetalScrap 1 (4)_14	53.79	21.15	0		
+266	CavesPond	MetalScrap 1 (3)_13	53.79	25.08	0		
+267	CavesPond	ScreenTransition_Right_0	70.86	23.28	0		
+268	CavesShrine	ScreenTransition_Left_0	-54.36	-18.25	0		
+269	CavesConnectionRoom	ScreenTransition_Right_0	40.37	-19.06	0		
+270	CavesShrineElevator	ScreenTransition_Left_0	-52.5	3.39	0		
+271	CavesShrineElevator	ScreenTransition_Down_0	-0.13	-31.59	0		
+272	CavesShrine	ScreenTransition_Up_0	7.93	31.23	0		
+273	CavesShrine	HoleTeleporter_0	46.5	1.5	0		
+274	CavesShrineBoss	HoleTeleporter_0	-0.3118114	-2.467849	16		
+275	CavesShrineBoss	CrystalAppear_GardenBoss	-0.3	3.23	0		
+276	FlashbackRoom	Flashback_-1_Entrance	0	0	0		
+277	FlashbackRoom	Flashback_1_Exit	0	0	0		
+278	FlashbackRoom	GardenBoss_MeteorShard	0	0	0		
+279	GardenFakeBossRoom	CrystalTeleportExit	-8.61	-12.79	0		
+280	SuburbsTerminal	Elevator_0	18.86	61.43	0		
+281	SuburbsRailsEntrance	Elevator_0	36.68	-82.15	0		
+282	SuburbsRailsEntrance	ScreenTransition_Up_0	-20.77	-84.57	0		
+283	SuburbsRailsMainSwitchRoom	ScreenTransition_Down_0	-62.38	-98.78	0		
+284	SuburbsRailsMainSwitchRoom	CrystalChest	-65.94	-77.75	0		
+285	SuburbsRailsMainSwitchRoom	Terminal	-62.4	-60.41	0		
+286	SuburbsRailsMainSwitchRoom	ScreenTransition_Right_0	-42.84	-62.96	0		
+287	SuburbsRailsLibraryEntrance	ScreenTransition_Left_0	-48.31	-66.35	0		
+288	MuseumEntrance	Elevator_0	-23.28	-28.54	0		
+289	MuseumEntranceF2	Elevator_0	-23.28	-28.54	0		
+290	MuseumEntranceF2	RockBlock_RockBlock (2)	-0.57	-2.96	0		
+291	MuseumEntranceF2	RockBlock_RockBlock (3)	2.43	-4.96	0		
+292	MuseumEntranceF2	ScreenTransition_Right_0	22.48	-5.5	0		
+293	MuseumDarkRailRoom	ScreenTransition_Left_0	-72.58	-16.05	0		
+294	MuseumEntranceF2	HoleTeleporter_2	0.5	-33.5	-3		
+295	MuseumEntrance	HoleTeleporter_2	0	-15	16		
+296	GardenDeepForest	ScreenTransition_Up_0	3.5	65.5	0		
+297	GardenJumpCorridor2	ScreenTransition_Down_0	23.77	-19.29	0		
+298	GardenJumpCorridor2	ScreenTransition_Left_0	-112.35	-0.46	0		
+299	DowntownCrumblingBuilding	ScreenTransition_Right_0	32.94	-21.43	0		
+300	DowntownCrumblingBuilding	ScreenTransition_Down_0	-7.7	-52.1	0		
+301	GardenWestArea	ScreenTransition_Up_0	-17.14	44.06	0		
+302	DowntownCrumblingBuilding	ScreenTransition_Left_0	-38.75	-35.38	0		
+303	DowntownFinalPuzzle	ScreenTransition_Right_0	46.19	-8.72	0		
+304	DowntownFinalPuzzle	RockBlock_RockBlock	29.23	-8.16	0		
+305	DowntownFinalPuzzle	ScreenTransition_Down_0	-15.2	-50.2	0		
+306	DowntownHoleRoom	ScreenTransition_Up_0	45.5	-11	0		
+307	DowntownFinalPuzzle	ScreenTransition_Left_0	-32.9	-5.09	0		
+308	DowntownCliff	ScreenTransition_Right_0	26.5	-25.5	0		
+309	DowntownCliff	RockBlock_RockBlock	14.81	-25.73	0		
+310	DowntownTerminal	RockBlock_RockBlock (1)	13.86	-22.6	0		
+311	DowntownTerminal	ScreenTransition_Right_0	25.37	-20.54	0		
+312	DowntownSuburbsRailsElevator	ScreenTransition_Left_0	-31.17	-23.06	0		
+313	DowntownSuburbsRailsElevator	Elevator_0	-6.31	-19.1	0		
+314	SuburbsRailsDowntownElevator	Elevator_0	-10.3	-89.18	0		
+315	SuburbsRailsDowntownElevator	DustChest	-16.31	-72.39	0		
+316	DowntownTerminal	RockBlock_RockBlock	12.36	-19.6	0		
+317	DowntownCliff	ScreenTransition_Down_0	-41.3	-75	0		
+318	DowntownSecretShop	ScreenTransition_Up_0	5.16	-35.44	0		
+319	DowntownSecretShop	Elevator_0	-12.88	-61.01	0		
+320	SewersDowntownElevator	Elevator_0	-24.44	17.29	0		
+321	SewersDowntownElevator	Terminal	-26.17	4.89	0		
+322	SewersDowntownElevator	ScreenTransition_Right_0	18.64	18.66	0		
+323	SewersMainWaterway	ScreenTransition_Left_0	-15.01	4.54	0		
+324	SewersMainWaterway	ScreenTransition_Up_0	21.52	33.1	0		
+325	SewersCentralRoom	ScreenTransition_Down_0	-8.69	-22.53	0		
+326	SewersCentralRoom	ScreenTransition_Right_0	49.26	43.33	0		
+327	SewersTerminal	ScreenTransition_Left_0	18.98	-0.67	0		
+328	SewersTerminal	Terminal	47.13	5.91	0		
+329	SewersCentralRoom	ScreenTransition_Up_0	-10	94.2	0		
+330	SewersCrossroads	ScreenTransition_Down_0	-16.33	-19.18	0		
+331	SewersCrossroads	ScreenTransition_Up_0	-57.5	48.45	0		
+332	SewersNorthPassage	ScreenTransition_Down_0	-18.52	-17.62	0		
+333	SewersNorthPassage	Terminal	-31.45119	13.90514	0		
+334	SewersNorthPassage	RiverEndChest	-64.35	-11.46	0		
+335	DowntownCliff	ScreenTransition_Left_0	-95.51	-46.9	0		
+336	DowntownIndustrialZoneEntrance	ScreenTransition_Right_0	36.01	-60.47	0		
+337	DowntownSecretShop	ScreenTransition_Right_0	43.91	-62.52	0		
+338	DowntownHoleRoom	ScreenTransition_Left_0	-46.58	-35.71	0		
+339	DowntownHoleRoom	ScreenTransition_Down_0	-21.33	-42.06	0		
+340	DowntownJumpRoom	ScreenTransition_Up_0	26	48.35	0		
+341	DowntownJumpRoom	ScreenTransition_Right_0	41.5	30	0		
+342	DowntownGardenEntrance	ScreenTransition_Left_0	-53.26	-19.3	0		
+343	DowntownBallPuzzle	RockBlock_RockBlock	44.06	-2.5	0		
+344	DowntownBallPuzzle	MetalScrap 151515 (3)_18	44.07	6.86	0		
+345	DowntownBallPuzzle	MetalScrap 151515 (2)_13	46.6	10.3	0		
+346	DowntownBallPuzzle	MetalScrap 151515 (1)_12	41.76	10.39	0		
+347	DowntownBallPuzzle	ScreenTransition_Right_1	56.04	17.15	0		
+348	DowntownMiniboss1	ScreenTransition_Left_1	-75.62	-66.12	0		
+349	DowntownMiniboss1	BlasterChest	-12.48	-33.7	0		
+350	DowntownMiniboss1	ScreenTransition_Up_0	-32.2	-21.65	0		
+351	DowntownChurch	ScreenTransition_Down_0	35.29	-46.2	0		
+352	DowntownSuburbsRailsElevator	ScreenTransition_Up_0	16.01	-7.72	0		
+353	DowntownCraterTowerEntrance	ScreenTransition_Down_0	2.82	-65.15	0		
+354	DowntownCraterTowerEntrance	RockBlock_RockBlock (2)	19.28	-41.21	0		
+355	DowntownCraterTowerEntrance	RockBlock_RockBlock (1)	20.78	-38.21	0		
+356	DowntownCraterTowerEntrance	ScreenTransition_Right_0	33.5	-37.78	0		
+357	DowntownLargeRoom	ScreenTransition_Left_0	-77.91	-48.8	0		
+358	DowntownLargeRoom	ScreenTransition_Right_0	78.28	-46.71	0		
+359	DowntownTunnel	ScreenTransition_Left_0	-48.92	-34.97	0		
+360	DowntownTunnel	ScreenTransition_Down_0	-27.5	-56.15	0		
+361	DowntownCrumblingBuilding	ScreenTransition_Up_0	5.62	-6.51	0		
+362	DowntownCrumblingBuilding	Elevator_0	14.48288	-37.9188	0		
+363	SuburbsRailsSouthElevator	Elevator_0	9.38	-13.79	0		
+364	SuburbsRailsSouthElevator	ScreenTransition_Right_0	22.73	-15.8	0		
+365	SuburbsRailsChipCopyEntrance	ScreenTransition_Left_0	-92.95	-7.96	0		
+366	SuburbsRailsChipCopyEntrance	Chest	14.8504	-46.81433	0		
+367	SuburbsRailsChipCopyEntrance	Terminal	-42.13	-46.9	0		
+368	SuburbsRailsSouthElevator	ScreenTransition_Up_0	-25.6	-4.61	0		
+369	SuburbsRailsFirstHookshotRoom	ScreenTransition_Down_0	-40.49	-125.49	0		
+370	SuburbsRailsFirstHookshotRoom	RailsHookshotChest	6.643751	-95.96128	0		
+371	SuburbsRailsFirstHookshotRoom	ScreenTransition_Up_0	-49.56	-59.47	0		
+372	SuburbsRailsCombatRoom	ScreenTransition_Down_0	-109.61	-122.73	0		
+373	SuburbsRailsCombatRoom	HookshotChest	-72.46999	-76.39	0		
+374	AquariumEntrance	ScreenTransition_Down_0	45.98	-23.03	0		
+375	AquariumStreet	ScreenTransition_Up_0	-28.22	12.36	0		
+376	AquariumStreet	RiverEndChest	34.11	33.78	0		
+377	AquariumStreet	ScreenTransition_Right_0	49	34.12	0		
+378	AquariumLake	ScreenTransition_Left_0	-104.78	5.85	0		
+379	AquariumLake	Elevator_0	-61.5	-18.9	0		
+380	AquariumIceBlockPuzzle4	Elevator_0	-5	14.6	0		
+381	AquariumIceBlockPuzzle4	ScreenTransition_Left_0	-20.99	9.64	0		
+382	AquariumIceBlockPuzzle3	ScreenTransition_Right_0	74.38	15.87	0		
+383	AquariumIceBlockPuzzle3	ScreenTransition_Down_0	39.99	-19.56	0		
+384	AquariumPuzzleRoom	ScreenTransition_Up_0	37.33	32.43	0		
+385	AquariumPuzzleRoom	HoleTeleporter_0	37.25	17.5	-3		
+386	AquariumBossRoom	HoleTeleporter_0	13.21	9.77	16		
+387	AquariumBossRoom	CrystalAppear_AquariumBoss	13.15	12.22	0		
+388	FlashbackRoom	Flashback_2_Exit	0	0	0		
+389	FlashbackRoom	AquariumBoss_MeteorShard	0	0	0		
+390	AquariumStreet	CrystalTeleportExit	-28.62	5.59	0		
+391	MuseumEntrance	ScreenTransition_Up_0	0.1	7.1	0		
+392	MuseumLabyrinth	ScreenTransition_Down_0	-27.34	-35.56	0		
+393	MuseumLabyrinth	ScreenTransition_Up_0	-9.13	17.38	0		
+394	MuseumPrizeRoom	ScreenTransition_Down_0	2.84	-44.63	0		
+395	MuseumPrizeRoom	HoleTeleporter_0	3	-27.5	-3		
+396	MuseumBossRoom	HoleTeleporter_0	-0.17	-28.47	16		
+397	MuseumBossRoom	CrystalAppear_MuseumBoss	-0.158612	-20.87	0		
+398	FlashbackRoom	Flashback_3_Exit	0	0	0		
+399	FlashbackRoom	MuseumBoss_MeteorShard	0	0	0		
+400	MuseumStreet	CrystalTeleportExit	-26.07	0.83	0		
+401	GardenVillage	CraftingTable	-26.29	-16.14	0		
+402	DowntownIndustrialZoneEntrance	ScreenTransition_Left_0	-24.07	-47.3	0		
+403	DowntownTunnel2	ScreenTransition_Right_0	13.38	-31.95	0		
+404	DowntownTunnel2	ScreenTransition_Left_0	-48.66	-32.27	0		
+405	IndustriesMainStreet	ScreenTransition_Right_0	38.65	27.33	0		
+406	IndustriesMainStreet	ScreenTransition_Up_1	20.65	66.3	0		
+407	IndustriesElevator	ScreenTransition_Down_1	-99.2	32.01	0		
+408	IndustriesElevator	Elevator_0	-93.17	50.61	0		
+409	SuburbsRailsExit	Elevator_0	23.31	-82.81834	0		
+410	SuburbsRailsExit	ScreenTransition_Right_0	68.78	-63.13	0		
+411	SuburbsRailsNest	ScreenTransition_Left_0	-35.45	-15.94	0		
+412	SuburbsRailsNest	EagleRideTrigger	-19.74	-10.71	0		
+413	SuburbsRailsBoss	Eagle	-8.34	-25.99	0		
+414	SuburbsRailsBoss	EaglesController_Exit	0	0	0		
+415	IndustriesCrashSite	AfterEagleBossCutscene	-89.65	66.39	0		
+416	IndustriesCrashSite	EagleBossCrystal	-80.75	57.29	0		
+417	FlashbackRoom	Flashback_4_Exit	0	0	0		
+418	FlashbackRoom	EagleBoss_MeteorShard	0	0	0		
+419	IndustriesCrashSite	ScreenTransition_Right_0	-59.71	74.06	0		
+420	IndustriesTutorial	ScreenTransition_Left_0	-67.71	39.43	0		
+421	IndustriesTutorial	ScreenTransition_Right_0	-7.53	64.35	0		
+422	IndustriesVillage	ScreenTransition_Left_0	-79.55	5.81	0		
+423	IndustriesVillage	Terminal	-60.21	24.77	0		
+424	IndustriesVillage	ScreenTransition_Up_1	-73.86	54.35	0		
+425	IndustriesMainStreet	ScreenTransition_Down_0	-75.21	5.82	0		
+426	IndustriesMainStreet	ScreenTransition_Up_0	-24.99	63.09	0		
+427	FactoryGates	ScreenTransition_Down_0	-82.02	24.94	0		
+428	FactoryGates	ScreenTransition_Up_0	-101.34	72.88	0		
+429	FactoryTerminal	ScreenTransition_Down_0	1.77	-4.25	0		
+430	FactoryTerminal	CraftingTable	9.56	50.65	0		
+431	FactoryTerminal	ScreenTransition_Up_0	1.97	58.61	0		
+432	FactoryEntrance	ScreenTransition_Down_0	-2.48	-4.57	0		
+433	FactoryEntrance	ScreenTransition_Up_0	-5.43	37.22	0		
+434	FactoryMechaRoom	ScreenTransition_Down_0	-0.12	-6.03	0		
+435	FactoryMechaRoom	ScreenTransition_Up_0	-0.14	32.45	0		
+436	FactoryLavaButtonRoom	ScreenTransition_Down_0	-11.43	-0.36	0		
+437	FactoryLavaButtonRoom	ScreenTransition_Right_0	62.1	10.04	0		
+438	FactoryRightCorridor1	ScreenTransition_Left_0	-25.63	2.2	0		
+439	FactoryRightCorridor1	ScreenTransition_Right_1	52.78	4.12	0		
+440	FactoryMissileRoom	ScreenTransition_Left_1	-15.36	34.89	0		
+441	FactoryMissileRoom	SafeDoor_SafeDoor (1)	-7	38.5	0		
+442	FactoryLavaButtonRoom	SafeDoor_SafeDoor	1	29.5	0		
+443	FactoryLavaButtonRoom	ScreenTransition_Up_0	1.14	40.05	0		
+444	FactoryPreBossRoom	ScreenTransition_Down_0	2.48	-12.25	0		
+445	FactoryPreBossRoom	SafeDoor_SafeDoor	2.5	23.51	0		
+446	FactoryPreBossRoom	ScreenTransition_Up_0	2.53	29.86	0		
+447	FactoryBossRoom	ScreenTransition_Down_0	2.08	2.69	0		
+448	FactoryBossRoom	CrystalAppear_FactoryBoss	2.45	20.07	0		
+449	FlashbackRoom	Flashback_5_Exit	0	0	0		
+450	FlashbackRoom	FactoryBoss_MeteorShard	0	0	0		
+451	FactoryGates	CrystalTeleportExit	-101.05	56.06	0		
+452	GardenVillage	ScreenTransition_Up_1	0.03	1.07	0		
+453	Blacksmith	ScreenTransition_Down_0	-8.29	-11.66	0		
+454	Blacksmith	CraftingTable (1)	8.99	2.132911	0		
+455	Blacksmith	CraftingTable	0.92	2.132911	0		
+456	DowntownTerminal	CraftingTable	4.1	-16.48	0		
+457	DowntownSuburbsRailsElevator	ArmadilloNPC	16.27208	-23.51404	0		
+458	DowntownCraterTowerEntrance	ScreenTransition_Up_0	-0.87	-9.1	0		
+459	DowntownCraterTowerGates	ScreenTransition_Down_0	-0.07	-27.91	0		
+460	DowntownCraterTowerEntrance	ScreenTransition_Left_1	-51.78	-15.21	0		
+461	DowntownMiniboss1	ScreenTransition_Right_1	21.03	0.15	0		
+462	DowntownMiniboss1	HookshotChest	1.23	0.28	10		
+463	DowntownMiniboss1	ScreenTransition_Up_1	-32.06	-11.15	0		
+464	DowntownSecretChurch	ScreenTransition_Down_0	156	-34.79	0		
+465	DowntownSecretChurch	KeyCard	156.05	-18.17	0		
+466	DowntownCraterTowerGates	ScreenTransition_Up_0	-0.22	12.35	0		
+467	CraterTowerRoom1	ScreenTransition_Down_0	-2.22	-57.86	0		
+468	CraterTowerRoom1	StaminaCogChest	-15.91	-31.78	0		
+469	CraterTowerRoom1	SceneChangeLadder_DownLadder	-30.82	-22.5	0		
+470	CraterTowerRoom2	SceneChangeLadder_UpLadder	-30.97	-28	0		
+471	CraterTowerRoom2	CraterTowerElevator_CraterTowerElevator	-63.38	-47.5	0		
+472	CraterTowerRoom3	CraterTowerElevator_CraterTowerElevator	-39.4	-73.5	0		
+473	CraterTowerRoom3	ScreenTransition_Up_0	-51.07	-36.34	0		
+474	CraterTowerRoomSecret	ScreenTransition_Down_0	-31.43	-13.9	0		
+475	CraterTowerRoomSecret	CraterTowerElevator_SecretElevator	-46.4	-3	0		
+476	CraterTowerRoom5	CraterTowerElevator_SecretElevator	-40.4	-23	0		
+477	CraterTowerRoom5	CraterTowerElevator_FinalElevator	51.1	22	0		
+478	FinalBossTerminal	CraterTowerElevator_FinalElevator	14	-45	0		
+479	FinalBossTerminal	Terminal	4.31	-43.77	0		
+480	FinalBossTerminal	CraftingTable	-5.69	-43.26	0		
+481	FinalBossTerminal	ScreenTransition_Up_0	3.76	-32.3	0		
+482	FinalBossRoom	ScreenTransition_Down_0	3.95	-56.84	0		
+483	GardenDeepForest	EnergyPlatform (1)	-55.58	14.37	0		
+484	Headquarters	Checkpoint_1.86_-3.95	1.86	-3.95	0		
+485	AquariumStreet	ScreenTransition_Left_0	-86.99	-4.73	0		
+486	AquariumForest	ScreenTransition_Right_0	-27.98	15.27	0		
+487	AquariumForest	ScreenTransition_Left_0	-93.95	11.75	0		
+488	AquariumExternalCombatRoom	ScreenTransition_Right_0	-44.49	11.82	0		
+489	AquariumExternalCombatRoom	ScreenTransition_Up_0	-74.15	35.03	0		
+490	MuseumBackdoor	ScreenTransition_Down_0	-87.9	-9.56	0		
+491	MuseumBackdoor	ScreenTransition_Up_0	-65.43	29.74	0		
+492	MuseumCircularRailRoom	ScreenTransition_Down_0	103.34	-61.43	0		
+493	GardenVillage	CraftingTable (1)	-10.38	-2.33	0		
+494	GardenShurikenCorridor2	MetalScrap 2 (2)_23	-10.44	-73.12	0		
+495	GardenShurikenCorridor2	MetalScrap 2 (1)_22	-32.94	-32.12	0		
+496	GardenShurikenCorridor2	MetalScrap 2_21	-32.99	-29.6	0		
+497	GardenNorthCaveEntrance	MetalScrap 1 (1)_0	11.92	-34.48	0		
+498	GardenNorthCaveEntrance	MetalScrap 1 (2)_0	17.96	-34.19	0		
+499	DowntownBallPuzzle	EnergyPlatform	22.5	17.5	3		
+500	DowntownBallPuzzle	Barrier	31	17.5	0		
+501	DowntownPushPuzzle	BoxPositionSaveTrigger	-1	7	0		
+502	SuburbsRailsLibraryEntrance	ScreenTransition_Left_1	-55.24	-35.4	0		
+503	SuburbsRailsMainSwitchRoom	ScreenTransition_Right_1	-0.01	-3.86	0		
+504	SuburbsRailsMainSwitchRoom	ScreenTransition_Up_0	-58.56	9.24	0		
+505	SuburbsRailsLibraryLeft	ScreenTransition_Down_0	-34.95	-21.81	0		
+506	DungeonRaidShop	CraftingTable	208.59	-65.96	0		
+507	MuseumMoonDeviceCorridor	Barrier	-62	-35.63	0		
+508	MuseumBasement	Elevator_0	-47.05021	2.913339	0		
+509	MuseumMoonDeviceCorridor	Elevator_0	-62.23	8.43	0		
+510	MuseumMoonDeviceCorridor	BoxPositionSaveTrigger (1)	-35.94	-16.58	0		
+511	MuseumMoonDeviceCorridor	BoxPositionSaveTrigger (2)	5.5	-16.5	0		
+512	MuseumDarkRailRoom	ScreenTransition_Right_0	113.96	-31.04	0		
+513	MuseumHoleRoom	ScreenTransition_Left_0	-30.05	-25.06	0		
+514	MuseumHoleRoom	ScreenTransition_Down_0	-4.95	-44.64	0		
+515	MuseumLibraryConnection	ScreenTransition_Up_0	-0.07	-5.82	0		
+516	MuseumLibraryConnection	BoxPositionSaveTrigger (1)	8.7	-25.76921	0		
+517	SuburbsRailsMainSwitchRoom	HighwaysPoleSwitch_EyeSpinButton (3)	-2.041332	-9.151844	0		
+518	MuseumMoonDeviceCorridor	MuseumLightSwitch_EyeSpinButton (2)	-62	-36.8	0		
+519	LabStartingRoom	Checkpoint_63.78356_2.312094	63.78356	2.312094	0		
+520	LabSwordRoom	Checkpoint_45.24_2.77	45.24	2.77	0		
+521	DowntownCliff	Checkpoint_8.4_-38.08	8.4	-38.08	0		
+522	IndustriesVillage	ScreenTransition_Right_0	-28.26	27.27	0		
+523	IndustriesSouth	ScreenTransition_Left_0	-120.18	26.56	0		
+524	MuseumEntrance	MetalScrap 2_15	-14.65	-35.5	0		
+525	AquariumLake	ScreenTransition_Up_0	-62.01	20.88	0		
+526	AquariumEntrance2	ScreenTransition_Down_0	45.98	-24.16	0		
+527	AquariumEntrance2	ScreenTransition_Up_0	45.9	28.25	0		
+528	AquariumEntranceCorridor	ScreenTransition_Down_0	77.5	-3.45	0		
+529	GardenJumpCorridor2	Barrier	5.4	24.95	0		
+530	GardenJumpCorridor2	Barrier 2	-45.04071	-2.486196	0		
+531	GardenJumpCorridor2	ShurikenGroundChest	-44.90631	-1.652873	0		
+532	DowntownFinalPuzzle	KeyChest	-11.07	8.44	6		
+533	DowntownFinalPuzzle	RockBlock_RockBlock (1)	30.23	-11.16	0		
+534	DowntownLargeRoom	ScreenTransition_Up_0	65.98	-32.79	0		
+535	DowntownAxeRoom	ScreenTransition_Down_0	9.03	-79.31	0		
+536	DowntownAxeRoom	RockBlock_RockBlock (1)	8.92	-62.15	0		
+537	DowntownLargeRoom	DarkChest	-9.291377	-0.8	0		
+538	DowntownLargeRoom	MetalScrap 2 (1)_1	8.98	-15.77	6		
+539	DowntownLargeRoom	HookshotSideChest	27.9	-43.1	7		
+540	DowntownLargeRoom	LongJumpRooftopChest	-48.85	-35.25	10		
+541	DowntownMiniboss1	RooftopEntranceChest	-24.9	-58.82	10.5		
+542	DowntownSecretDeadend	ScreenTransition_Up_0	-78.97	30.4	0		
+543	FactoryEntrance2	ScreenTransition_Down_0	2.17	6.77	0		
+544	FactoryEntrance2	FactoryOfficeChest	2.75	20.66	0		
+545	FactoryEntrance2	ScreenTransition_Left_0	-17.92	38.27	0		
+546	FactoryTerminal	ScreenTransition_Right_0	62.4	46.68	0		
+547	FactoryMechaRoom	ScreenTransition_Right_0	20.88	11.61	0		
+548	FactoryPrePuzzle2	ScreenTransition_Left_0	-16.77	21.13	0		
+549	FactoryRightCorridor1	StrengthChipChest	-1.471896	20.41261	0		
+550	FactoryRightCorridor1	ScreenTransition_Left_1	8.11	51.58	0		
+551	FactoryMapRoom	ScreenTransition_Right_1	32.45	11.48	0		
+552	FactoryRightCorridor1	FactoryKey1	31.99	61.89	0		
+553	FactoryMissileRoom	SafeDoor_SafeDoor (4)	11	63	0		
+554	FactoryMissileRoom	DustChest	11.05	69.30231	0		
+555	FactoryMissileRoom	SafeDoor_SafeDoor (3)	47	60.5	0		
+556	FactoryMissileRoom	ScreenTransition_Up_0	46.93	69.49	0		
+557	FactoryMuseumConnection	ScreenTransition_Down_0	-16.73	6.48	0		
+558	FactoryMuseumConnection	DustChest	35.53	40.5354	0		
+559	CavesMinecartBarrierPuzzle	ScreenTransition_Left_0	-49.28	-10.73	0		
+560	CavesMinecartPuzzleZero	ScreenTransition_Right_0	19.02	-36.98	0		
+561	CavesMinecartPuzzleZero	ScreenTransition_Left_0	-35.87	11.86	0		
+562	CavesEntrance	ScreenTransition_Right_0	25.55	23.93	0		
+563	AquariumEntrance	Elevator_0	46	17.1	0		
+564	AquariumCentralRoom	Elevator_0	33.5	-30.84	0		
+565	AquariumCentralRoom	RockBlock_RockBlock	56.91	-28.87	0		
+566	AquariumCentralRoom	MetalScrap 2 (2)_14	57.07	-28.42	0		
+567	FactoryPuzzle1	ScreenTransition_Left_0	-42.47	22.32	0		
+568	FactoryEntrance	KeyDoor_KeyDoorVertical_Right	50.90107	14	0		
+569	FactoryEntrance	ScreenTransition_Right_0	61.18	11.98	0		
+570	FactoryPuzzle1	ScreenTransition_Down_1	-18.42	4.82	0		
+571	FactoryArmRoom	ScreenTransition_Up_1	-25.62	34.34	0		
+572	CavesMinecartBarrierPuzzle	ScreenTransition_Up_0	-18.3	40.95	0		
+573	CavesMinecartMainPuzzle	ScreenTransition_Down_0	-20.62	-24.68	0		
+574	ChurchEntrance	Terminal	146.73	-0.01	0		
+575	ChurchEntrance	ScreenTransition_Left_0	118.64	18.88	0		
+576	ChurchFinalRoom	ScreenTransition_Right_0	253.68	13.23	0		
+577	ChurchFinalRoom	ScreenTransition_Up_0	180.4	50.5	0		
+578	ChurchMiniboss	ScreenTransition_Down_0	219.36	-0.89	0		
+579	ChurchMiniboss	ScreenTransition_Right_0	247.41	44.68	0		
+580	ChurchDarkMonsterRoom	ScreenTransition_Left_0	189.18	-11.92	0		
+581	ChurchDarkMonsterRoom	ScreenTransition_Right_0	263.31	-5.76	0		
+582	ChurchHookshotRoom	ScreenTransition_Left_0	110.52	22.28	0		
+583	ChurchHookshotRoom	ScreenTransition_Up_0	126.02	59.89	0		
+584	ChurchTimeRoom	ScreenTransition_Down_0	153.81	-26.3	0		
+585	LabDoctorsRoom	Checkpoint_48.29_5.49	48.29	5.49	0		
+586	DowntownCrumblingBuilding	MetalScrap 1 (1)_8	-22.8	-20.58	0		
+587	DowntownCrumblingBuilding	MetalScrap 1_7	-20.43	-41.11	0		
+588	DowntownCraterTowerEntrance	RockBlock_RockBlock	18.78	-35.21	0		
+589	AquariumStreet	RockBlock_RockBlock (4)	-19.15	-18.97	0		
+590	AquariumStreet	MetalScrap 1_0	4.79	-17.89	0		
+591	AquariumStreet	WalljumpStatueChest	4.4	6.9	4		
+592	AquariumStreet	MetalScrap 1 (3)_3	-64.92	-3.1	0		
+593	AquariumForest	TinyIslandChest	-85.16	7.62	0		
+594	GardenDeepForest	EnergyPlatform (2)	-73.28	5.74	0		
+595	GardenDeepForest	EnergyPlatform (3)	-73.28	-1.76	0		
+596	DowntownTunnel	ScreenTransition_Right_0	-4.13	-34.27	0		
+597	SuburbsDowntownConnection	ScreenTransition_Left_0	-4.11	31.9	0		
+598	MuseumLabyrinth	RockBlock_RockBlock (2)	-10.63	7.75	0		
+599	MuseumEntrance	MetalScrap 2 (1)_16	14.85	-25.5	0		
+600	MuseumEntrance	RockBlock_RockBlock33333	15.65	-21.1	0		
+601	AquariumLake	FishNPC	-71.02085	10.78	0		
+602	AquariumEntrance2	MetalScrap 2_14	43.1	11.26	0		
+603	SewersCrossroads	ScreenTransition_Right_0	44.93	35.4	0		
+604	AquariumIceBlockPuzzle1	ScreenTransition_Left_0	-126.76	16.93	0		
+605	AquariumIceBlockPuzzle1	ScreenTransition_Down_0	-112.4	6.81	0		
+606	AquariumWestElevator	ScreenTransition_Up_0	68.6	50.9	0		
+607	AquariumWestElevator	BoxPositionSaveTrigger	63.5	37	0		
+608	SewersNorthPassage	CraftingTable	-18.51	14.45	0		
+609	DowntownHoleRoom	MetalScrap 1 (1)_18	-35.14	-25.58	4		
+610	DowntownJumpRoom	JumpyChest	27.94	3.25	0		
+611	DowntownJumpRoom	Barrier	-31.25	35.70023	0		
+612	DowntownJumpRoom	JumpBootsChest	-31.16	36.26	0		
+613	FactoryMechaRoom	ScreenTransition_Left_0	-51.56	14.52	0		
+614	FactoryDrillingCorridor	ScreenTransition_Right_0	73.6	14.89	0		
+615	FactoryMuseumConnection	SafeDoor_SafeDoor	32	13.5	0		
+616	FactoryMuseumConnection	metalll_0	36.4	10.53	0		
+617	FactoryMuseumConnection	metallll3_0	27.74	5.07	0		
+618	FactoryMuseumConnection	SafeDoor_SafeDoor (1)	35.5	34.5	0		
+619	FactoryLavaButtonRoom	FactoryDustChest	12.62721	30.60282	3		
+620	DowntownTerminal	CrystalTeleportExit	2.37	-27.77	0		
+621	DowntownSuburbsRailsElevator	MetalScrap 1_9	1.22	-18.01	0		
+622	Blacksmith	OlgaNPC	-3.94	-1.53	0		
+623	GardenNorthCaveEntrance	TopChest	26.22	-4.15	6		
+624	GardenVillage	MetalScrap 1 (1)_1	-6.97	14.41	0		
+625	GardenVillage	TobiasNPC	-18.30014	-1.974651	0		
+626	GardenVillage	MetalScrap 1_0	-49.91	7.14	0		
+627	GardenDeepForest	MetalScrap 2 (1)_7	-40.77	-19.52	0		
+628	GardenWestArea	ScreenTransition_Down_0	-21.4	-35.52	0		
+629	DowntownGardenEntranceInterior	ScreenTransition_Up_0	1.82	15.82	0		
+630	DowntownGardenEntranceInterior	Terminal	14.42	-0.67	0		
+631	DowntownGardenEntranceInterior	ScreenTransition_Down_0	3.04	-15.28	0		
+632	DowntownGardenEntrance	ScreenTransition_Up_0	-16.38	-1.93	0		
+633	DowntownGardenEntrance	DarkChest1	-42.19	-48.07	0		
+634	DowntownGardenEntrance	MetalScrap 1_12	10.3	-16.45	0		
+635	DowntownGardenEntrance	MetalScrap22 (1)_14	-40.69	-3.59	0		
+636	GardenVillage	MetalScrap 1 (2)_2	31.99	-28.45	0		
+637	SuburbsFillRoom2	MetalScrap 1 (1)_0	24.53	50.23	0		
+638	GardenJumpCorridor2	MetalScrap 2_23	-9.12	-42.51	0		
+639	GardenJumpCorridor2	MetalScrap 2 (1)_24	-12.82	-43.07	0		
+640	GardenJumpCorridor2	MetalScrap 2 (2)_25	-16.03	-42.01	0		
+641	GardenNorthCaveEntrance	MetalScrap 1_0	2.14	-5	0		
+642	DowntownAxeRoom	MetalScrap 1_7	-13.8	-30.17	0		
+643	DowntownAxeRoom	MetalScrap 1 (1)_8	4.58	-3.87	0		
+644	DowntownAxeRoom	MetalScrap 1 (3)_10	12.66	-2.53	0		
+645	DowntownAxeRoom	MetalScrap 1 (2)_9	17.02	-7.7	0		
+646	DowntownLargeRoom	MetalScrap 2 (2)_2	-64.1	-29.9	0		
+647	DowntownChurch	Barrier	35.14	6.23	0		
+648	DowntownChurch	ChurchChest	35.16	6.81	0		
+649	DowntownCraterTowerEntrance	MetalScrap 1_0	-46.05	-18.79	0		
+650	DowntownChurch	MetalScrap 1 (2)_0	11.1	1.63	0		
+651	DowntownChurch	ScreenTransition_Left_0	-23.19	-15.51	0		
+652	DowntownChurchCorridor	ScreenTransition_Right_0	174.31	-17.68	0		
+653	DowntownChurchCorridor	MetalScrap 1_0	147.6628	-15.59498	0		
+654	DowntownChurchCorridor	ChurchChest	90.03	-6.19	0		
+655	DowntownChurchCorridor	ScreenTransition_Left_0	72.76	-0.98	0		
+656	FactoryPuzzle1	ScreenTransition_Right_0	67.98	51.72	0		
+657	FactoryPuzzle1	DustChest	62.61	20.49	0		
+658	FactoryPuzzle1	Barrier	47.151	29.28	0		
+659	FactoryPuzzle1	ScreenTransition_Down_0	46.42	3.14	0		
+660	FactoryArmRoom	ScreenTransition_Up_0	22.04	34.34	0		
+661	FactoryArmRoom	CogChest	-36.7	-7.01	0		
+662	DowntownChurchCorridor	Elevator_0	116.55	17.57	0		
+663	ChurchEntrance	Elevator_0	170.53	3.21	0		
+664	ChurchEntrance	ScreenTransition_Down_0	162.59	-23	0		
+665	LabAirDucts	ScreenTransition_Up_0	34.85	42.36	0		
+666	LabAirDucts	MetalScrap 1 (1)_12	60.94	5.85	0		
+667	LabAirDucts	MetalScrap 1_11	65.17	5.85	0		
+668	LabAirDucts	RockBlock_RockBlock (1)	72.6	4.49	0		
+669	LabAirDucts	MeteorDustChest	102.54	17.78	0		
+670	LabAirDucts	ScreenTransition_Right_0	146.09	-6.27	0		
+671	SewersCentralRoom	ScreenTransition_Left_0	-103.41	62.11	0		
+672	SewersCentralRoom	EasyChest1	-72.61	48.75	0		
+673	SewersCrossroads	AquariumLakeChest	16.37	3.9	0		
+674	AquariumWestElevator	Elevator_0	41.5	40.5	4		
+675	AquariumExternalCombatRoom	Elevator_0	-83.45	25.39	0		
+676	AquariumExternalCombatRoom	ScreenTransition_Left_0	-100.92	20.54	0		
+677	MuseumStreet	ScreenTransition_Right_0	63.1	23.44	0		
+678	MuseumLabyrinth	DustChest	6.21	-32	0		
+679	MuseumLabyrinth	RockBlock_RockBlock (3)	-7.63	7.75	0		
+680	MuseumPrizeRoom	MuseumTreasureRoomChest	3.109924	-18.38	0		
+681	MuseumLabyrinth	MetalScrap 1_0	18.98	-10.13	0		
+682	MuseumPrizeRoom	MetalScrap 2 (3)_0	-8.84	-30.2	0		
+683	MuseumPrizeRoom	MetalScrap 2 (5)_0	-8.71	-22.7	0		
+684	CavesShurikenRoom	LeftIsleChest	-26.23	73.53	0		
+685	CavesNestRoom	Barrier	2	22.9	0		
+686	CavesNestRoom	ScreenTransition_Left_0	-50.52	5.37	0		
+687	CavesMinecartMainPuzzle	ScreenTransition_Right_0	51.5	26.94	0		
+688	CavesMinecartMainPuzzle	MetalScrap 1 (1)_9	38.4	27	0		
+689	CavesMinecartMainPuzzle	HookshotCorridorChest	-9.88	57.62	0		
+690	CavesPond	DustChest	-9.69	29.96	4		
+691	CavesShrine	DustChest	14.77	-24.65	0		
+692	SuburbsRailsGrindRoom	Barrier	173.91	-78.92	0		
+693	SuburbsRailsEntrance	ScreenTransition_Left_0	-70.79	-102.9	0		
+694	SuburbsRailsFirstHookshotRoom	ScreenTransition_Right_0	36.2	-112.59	0		
+695	ChurchEntrance	CraftingTable	151.14	-7.05	0		
+696	GardenWestArea	MetalScrap 2_10	-27.37	6.14	4		
+697	DowntownGardenEntrance	MetalScrap22_13	4.4	-43.2	0		
+698	GardenNorthCaveEntrance	ScreenTransition_Right_0	58.74	-3.53	0		
+699	GardenDoctorsTombstone	ScreenTransition_Left_0	-36.6	-17.44	0		
+700	GardenDoctorsTombstone	MetalScrap 1 (1)_0	-23.15	-6.16	0		
+701	GardenDoctorsTombstone	MetalScrap 1_0	-0.26	-17.7	0		
+702	DowntownGardenEntranceInterior	CraftingTable	-3.62	-6.51	0		
+703	MuseumLabyrinth	ScreenTransition_Left_0	-42.87	-11.78	0		
+704	MuseumMapRoom	ScreenTransition_Right_0	6.94	-10.26	0		
+705	MuseumPrizeRoom	MetalScrap 2 (2)_0	15.79	-29.25	0		
+706	MuseumPrizeRoom	MetalScrap 2 (1)_0	15.79	-23.03	0		
+707	MuseumPrizeRoom	MetalScrap 2_0	-10.28	-15.37	0		
+708	SuburbsRailsEntrance	RockBlock_RockBlock (5)	41	-91.85	0		
+709	SuburbsRailsEntrance	RockBlock_RockBlock (6)	40.11	-94.4	0		
+710	SuburbsRailsEntrance	RockBlock_RockBlock	41	-88.9337	0		
+711	SuburbsRailsFirstHookshotRoom	RailsChip2	-63.42	-114.58	0		
+712	SuburbsRailsEntrance	ScreenTransition_Right_0	55.88	-91.34	0		
+713	SuburbsRailsGrindRoom	ScreenTransition_Left_0	-102.8	-100.96	0		
+714	SuburbsRailsGrindRoom	MetalScrap 2_0	10.78	-108.97	0		
+715	SuburbsRailsGrindRoom	MetalScrap 2 (1)_0	78.06	-109.47	0		
+716	SuburbsRailsGrindRoom	MetalScrap 2 (3)_0	18.07	-64.27	0		
+717	SuburbsRailsGrindRoom	MetalScrap 2 (4)_0	-93.4	-53.8	0		
+718	SuburbsTerminal	RockBlock_RockBlock	20.69	18.88502	0		
+719	SuburbsTerminal	RockBlock_RockBlock (1)	23.87	18.88502	0		
+720	SuburbsTerminal	ScreenTransition_Down_0	21.85	4.95	0		
+721	GardenDoctorsTombstone	ScreenTransition_Up_0	-18.88	21.91	0		
+722	AquariumStreet	RockBlock_RockBlock (3)	-46.49	-13.14	0		
+723	AquariumStreet	MetalScrap 1 (4)_4	-61.35	-9.75	0		
+724	AquariumStreet	IslandChest	-63.1	-6.1	0		
+725	AquariumStreet	MetalScrap 1 (1)_1	9.15	2.7	0		
+726	AquariumStreet	MetalScrap 1 (2)_2	-49.08	19.8	9		
+727	AquariumLake	MetalScrap 1_28	-74.06	15.32	0		
+728	AquariumLake	RockBlock_RockBlock (2)	-39.57	18.54	0		
+729	AquariumEntranceCorridor	MetalScrap 1 (1)_17	90.34	18.15	0		
+730	AquariumEntranceCorridor	MetalScrap 1_13	41.84	18.64933	0		
+731	AquariumEntrance	MetalScrap 1_34	61.38	37.662	0		
+732	AquariumEntrance	ScreenTransition_Up_0	46.9	46.85	0		
+733	AquariumNorthEntrance	ScreenTransition_Down_0	45.98	-24.16	0		
+734	AquariumNorthEntrance	MetalScrap 1_12	40.5	2.5	3		
+735	AquariumNorthEntrance	MetalScrap 1 (1)_13	38.5	-0.5	3		
+736	AquariumNorthEntrance	WalljumpWaterChest	52.02	1.09	3		
+737	MuseumOptionalRail	Barrier	147.78	-21.1	0		
+738	AquariumEntrance	BoxPositionSaveTrigger	60.44	23.45	0		
+739	AquariumEntranceCorridor	Elevator_0	96	12.6	0		
+740	AquariumWaterRoomBig	Elevator_0	83.5	47.37	0		
+741	AquariumIceBlockPuzzle3	MetalScrap 1 (1)_11	-12.21	13.3	0		
+742	AquariumIceBlockPuzzle3	MetalScrap 1 (2)_12	56.05	33.74	0		
+743	AquariumIceBlockPuzzle3	MetalScrap 2sss_0	36.27	8.67	0		
+744	AquariumIceBlockPuzzle3	MetalScrap 1_8	-11.93809	27.06	0		
+745	GardenWestArea	MetalScrap 1 (1)_37	-27.49	35.11	0		
+746	GardenWestArea	MetalScrap 1_27	-30.65	35.06	0		
+747	DowntownMiniboss1	MetalScrap 1_0	14.82	-20.4	10		
+748	DowntownMiniboss1	MetalScrap 2ttttt_0	-46.74966	-22.79694	0		
+749	DowntownMiniboss1	Barrier	-12.5	-34.44	0		
+750	DowntownChurch	MetalScrap 1_0	14.97	-30.9	0		
+751	DowntownChurch	Elevator_0	64.16	30.72	0		
+752	SuburbsRailsChurch	Elevator_0	-12.79	-10.1	0		
+753	SuburbsRailsChurch	SuburbsRailsKey3	-41.64	-8.57	4		
+754	DowntownChurch	MetalScrap 1 (1)_0	58.6	-10.37	0		
+755	DowntownChurch	RockBlock_RockBlock (5)aaa	14.47	9.8	0		
+756	DowntownChurch	ScreenTransition_Up_0	17.35	28.88	0		
+757	DowntownChurchCorridor2	ScreenTransition_Down_0	-204.68	-5.05	0		
+758	DowntownChurchCorridor2	MetalScrap 2 (1)_29	-270.28	13.44	0		
+759	DowntownChurchCorridor2	MetalScrap 2_12	-264.17	13.58	0		
+760	DowntownChurchCorridor2	ScreenTransition_Down_1	-266.25	-5.05	0		
+761	DowntownChurchCorridor	ScreenTransition_Up_1	146.97	20.9	0		
+762	LabAirDucts	RockBlock_RockBlock	69.6	6.953098	0		
+763	SewersCentralRoom	MetalScrap 2 (4)_4	-37.5	74	0		
+764	SewersCrossroads	MetalScrap 2 (1)_12	-40.74	-25.79	0		
+765	SewersCrossroads	MetalScrap 2 (2)_13	-34.18	-25.62	0		
+766	SewersCrossroads	TopLakeChest	-34.51	39.92	0		
+767	SewersCrossroads	MetalScrap 2_11	-30.2	21.6	0		
+768	SewersNorthPassage	MetalScrap 1_0	-47.5	-5	0		
+769	SewersNorthPassage	ScreenTransition_Up_0	-25.51	22.48	0		
+770	MuseumBasement	ScreenTransition_Down_0	-24.7	-59.5	0		
+771	AquariumIceBlockPuzzle1	MetalScrap 1_13	-84.69	23.45	0		
+772	MuseumBackdoor	MetalScrap 1_0	-41.43	-1.78	0		
+773	MuseumBackdoor	MetalScrap 1 (1)_0	-41.21	15.29	0		
+774	MuseumCircularRailRoom	MuseumLightSwitch_EyeSpinButton	103.6	-38.26	0		
+775	MuseumEntrance	MetalScrap 2 (2)33_19	19.98	-1.1	0		
+776	MuseumLabyrinth	MetalScrap 1 (1)_1	12.48	8.87	0		
+777	MuseumLabyrinth	MetalScrap 1 (2)_2	-27.02	0.37	0		
+778	CavesShurikenRoom	MetalScrap 1 (1)_9	-23.27	80.35	0		
+779	CavesShurikenRoom	MetalScrap 1_8	-23.27	67.35	0		
+780	CavesMinecartMainPuzzle	MetalScrap 1 (2)_10	-6.6	59.4	0		
+781	CavesMinecartMainPuzzle	MetalScrap 1 (3)_11	-13.1	59.4	0		
+782	CavesPond	MetalScrap 1_11	34	15.5	0		
+783	SuburbsGardenConnection	MetalScrap 2_13	-7.37	-50.35	0		
+784	AquariumEntrance2	IceStarBlueprintChest	49.61	11.12	0		
+785	GardenShurikenCorridor2	RoofChest	61.45	-5.23	8		
+786	FactoryPuzzle1	MetalScrap 444_0	36.99385	12.64254	0		
+787	FactoryGates	MetalScrap 2 (3)_2	-100.76	45.51	0		
+788	FactoryGates	MetalScrap 2_0	-144.77	57.76	0		
+789	FactoryGates	MetalScrap 2 (2)_1	-121.73	73.32	6		
+790	IndustriesMainStreet	MetalScrap 1_2	-58.08	47.29	6		
+791	IndustriesMainStreet	MetalScrap 1 (3)_3	-1.5	36.3	0		
+792	IndustriesMainStreet	MetalScrap 1 (1)_22	-5.01	47.29	5		
+793	IndustriesElevator	MetalScrap 1_2	-71.45	61.78	0		
+794	SuburbsRailsExit	RailsIndustryConnectionChest	-3.66	-81.8	0		
+795	SuburbsRailsExit	ScreenTransition_Down_0	13.4	-95.23	0		
+796	SuburbsRailsDarkMonsterRoom	ScreenTransition_Up_0	-18.09	-38.06	0		
+797	SuburbsRailsDarkMonsterRoom	CorruptedRoadChipChest	-1.77	-87.25	0		
+798	SuburbsRailsNest	ScreenTransition_Right_0	-1.68	-15.93	0		
+799	SuburbsRailsFinalHookshotRoom	ScreenTransition_Left_0	-108.95	-117.31	0		
+800	DowntownIndustrialZoneEntrance	Barrier	24.99	-25.09	0		
+801	DowntownIndustrialZoneEntrance	GhoulBattleChest	25.04	-24.44	0		
+802	DowntownCliff	ScreenTransition_Down_1	-79.3	-68.08	0		
+803	ToyRoom	ScreenTransition_Up_0	36.6	32.27	0		
+804	ToyRoom	RockBlock_RockBlock (1)aaaaa	29.76	20.83	0		
+805	ToyRoom	ToyChest	22.86	24.37	0		
+806	ToyRoom	ScreenTransition_Down_0	6.25	-11.6	0		
+807	ToyRoomEntrance	ScreenTransition_Up_0	94.1	42.75	0		
+808	ToyRoomEntrance	ScreenTransition_Up_1	73.86	54.35	0		
+809	IndustriesSouth	ScreenTransition_Down_0	8.76	14.62	0		
+810	IndustriesSouth	Elevator_0	-3.1	59.54	0		
+811	CavesFactory1	Elevator_0	19.02	21.66	0		
+812	CavesFactory1	ScreenTransition_Left_0	-30.15	10.6	0		
+813	CavesFactory2	ScreenTransition_Right_0	36.03	9.43	0		
+814	CavesFactory2	RockBlock_RockBlock (1)	-41.3	8.94	0		
+815	CavesFactory2	ScreenTransition_Left_0	-48.84	10.99	0		
+816	FactoryCaveTerminal	ScreenTransition_Right_0	60.37	20.72	0		
+817	FactoryCaveTerminal	FactoryCaveDustChest	-11.43628	19.77095	0		
+818	SuburbsRailsLibraryEntrance	RockBlock_RockBlock (2)	50.11	-55.84	0		
+819	SuburbsRailsLibraryEntrance	CogChest	72.66	-62.57	0		
+820	CavesEntrance	CogChest	-5.95	9.42	4		
+821	LabAirDucts	ScreenTransition_Left_0	16.12	-7.34	0		
+822	LabResearchRoom	ScreenTransition_Right_0	78.34	7.11	0		
+823	ChurchEntrance	ScreenTransition_Up_0	158.39	37	0		
+824	ChurchBlockRoom	ScreenTransition_Down_0	205.12	-2.83	0		
+825	ChurchBlockRoom	ChurchChest	209.25	50.42	0		
+826	SewersAquariumConnection	ScreenTransition_Left_0	3.64	-25.03	0		
+827	SewersColosseum	ScreenTransition_Right_0	50.81	15.97	0		
+828	SewersColosseum	DarkMonsterChest	1.016897	28.41718	0		
+829	SewersColosseum	ScreenTransition_Left_0	-58.48	8.06	0		
+830	SewersTerminal	ScreenTransition_Right_0	54.55	-15.59	0		
+831	SewersTerminal	MetalScrap 1_0	39	-15	0		
+832	SewersCentralRoom	HardChest	-6.55	37.48	0		
+833	DowntownJumpRoom	AfterBossChest	-7.6	44.5	8		
+834	SuburbsRailsChipCopyEntrance	MetalScrap 2 (1)_0	-37.43	-43.57618	0		
+835	SuburbsRailsChipCopyEntrance	MetalScrap 2_0	-46.71532	-43.57618	0		
+836	SuburbsRailsFirstHookshotRoom	HighwaysPoleSwitch_EyeSpinButton (1)	-2.041332	-9.151844	0		
+837	SuburbsRailsChipCopyEntrance	ScreenTransition_Right_0	54.02	-2.02	0		
+838	SuburbsRailsKeyRoom2	ScreenTransition_Left_0	-36.91	-1.15	0		
+839	SuburbsRailsKeyRoom2	ScreenTransition_Up_0	-20.6	8.01	0		
+840	SuburbsRailsEntrance	ScreenTransition_Down_0	-21.53	-117	0		
+841	CavesMinecartPuzzleZero	Chest	-33.89	-33.73	0		
+842	CavesMinecartBarrierPuzzle	MetalScrap 2 (2)_11	26.98	-4.69	0		
+843	CavesEntrance	CraftingTable	-7.64	1.39	0		
+844	GardenShurikenPuzzle1	PillarChest	27.99	-7	4		
+845	SuburbsRailsChipCopyEntrance	Barrier	-23.72543	-83.96605	0		
+846	CavesEntrance	CraftingTable (1)	7.9	1.39	0		
+847	AquariumIceBlockPuzzle3	Barrier	32.47	21.78	0		
+848	AquariumIceBlockPuzzle3	KeyChest	32.53	22.5	0		
+849	AquariumIceBlockPuzzle3	ScreenTransition_Up_0	22.1	50.71	0		
+850	AquariumCentralRoom	ScreenTransition_Down_0	77.34	-86.35	0		
+851	AquariumCentralRoom	KeyDoor_KeyDoorHorizontal_Down	77.5	-69.5	0		
+852	AquariumCentralRoom	SouthSmallLakeChest	52.47166	-57.7	0		

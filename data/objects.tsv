@@ -1,0 +1,378 @@
+type	scene	name	x	y	height
+GameObject	GardenVillage	MetalScrap 2333_5	26.39	33.7	0
+GameObject	GardenVillage	MetalScrap 1 (1)_1	-6.97	14.41	0
+GameObject	GardenVillage	MetalScrap 1 (2)_2	31.99	-28.45	0
+GameObject	GardenVillage	MetalScrap 1_0	-49.91	7.14	0
+GameObject	GardenDeepForest	MetalScrap 23333_0	-67.74394	2.553062	0
+GameObject	GardenDeepForest	MetalScrap 2_7	10.28	-35.26	0
+GameObject	GardenDeepForest	MetalScrap 2 (6)_12	31.23	-41.86	0
+GameObject	GardenDeepForest	MetalScrap 2 (1)_8	-40.77	-19.52	0
+GameObject	GardenDeepForest	MetalScrap 2 (3)_10	-49.77	30.06	6
+GameObject	GardenDeepForest	MetalScrap 2 (5)_11	31.03	-37.52	0
+GameObject	GardenDeepForest	MetalScrap 2 (2)_9	-36.5	11.54	2
+GameObject	GardenShurikenCorridor2	MetalScrap 2 (2)_24	-10.44	-73.12	0
+GameObject	GardenShurikenCorridor2	MetalScrap 2_0	11.08	-2.28	4
+GameObject	GardenShurikenCorridor2	MetalScrap 2 (1)_23	-32.94	-32.12	0
+GameObject	GardenShurikenCorridor2	MetalScrap 2_22	-32.99	-29.6	0
+GameObject	SuburbsGardenConnection	MetalScrap 2_13	-7.37	-50.35	0
+GameObject	SuburbsGardenConnection	RockBlock_RockBlock (2)	-8.86	34.93	0
+GameObject	SuburbsGardenConnection	RockBlock_RockBlock (3)	-5.76	35.95	0
+GameObject	SuburbsGardenConnection	RockBlock_RockBlock (1)	-3.5	38.93	0
+GameObject	SuburbsGardenConnection	RockBlock_RockBlock	-10.31	37.94	0
+GameObject	LabWestWing	MetalScrap 1_12	59.81	-16.19	0
+GameObject	LabEastWing	MetalScrap 1_18	75.02	-3.26	0
+GameObject	LabElevatorRoom	MetalScrap 1_12	-65.1	-6	0
+GameObject	DowntownCliff	MetalScrap 1 (1)_21	-81.05	-39.1	3
+GameObject	DowntownCliff	MetalScrap 1 (2434_25	-38.5	-55	0
+GameObject	DowntownCliff	MetalScrap 1_20	-67.38	-41.6	3
+GameObject	DowntownCliff	RockBlock_RockBlock	14.81	-25.73	0
+GameObject	DowntownCliff	RockBlock_RockBlock (1)	14.08	-28.88	0
+GameObject	DowntownTerminal	RockBlock_RockBlock	12.36	-19.6	0
+GameObject	DowntownTerminal	RockBlock_RockBlock (1)	13.86	-22.6	0
+GameObject	DowntownPushPuzzle	KeyDoor_KeyDoorHorizontal_Up	13.97	10.14723	0
+GameObject	DowntownBallPuzzle	MetalScrap 151515 (2)_14	46.6	10.3	0
+GameObject	DowntownBallPuzzle	MetalScrap 151515 (1)_13	41.76	10.39	0
+GameObject	DowntownBallPuzzle	MetalScrap 151515 (3)_19	44.07	6.86	0
+GameObject	DowntownBallPuzzle	RockBlock_RockBlock (1)	47.06	-2.5	0
+GameObject	DowntownBallPuzzle	RockBlock_RockBlock	44.06	-2.5	0
+GameObject	DowntownMiniboss1	MetalScrap 2ttttt_0	-46.74966	-22.79694	0
+GameObject	DowntownMiniboss1	MetalScrap 1_0	14.82	-20.4	10
+GameObject	DowntownMiniboss1	MetalScrap 1 (1)_1	3.33	-2.47	3
+GameObject	DowntownMiniboss1	MetalScrap 2_4	-7.26	-20.82	19.5
+GameObject	LabSwordRoom	MetalScrap 1_14	40.18	-2.93	0
+GameObject	DowntownCraterTowerEntrance	MetalScrap 1_0	-46.05	-18.79	0
+GameObject	DowntownCraterTowerEntrance	RockBlock_RockBlock	18.78	-35.21	0
+GameObject	DowntownCraterTowerEntrance	RockBlock_RockBlock (1)	20.78	-38.21	0
+GameObject	DowntownCraterTowerEntrance	RockBlock_RockBlock (2)	19.28	-41.21	0
+GameObject	GardenWestArea	MetalScrap 2_12	-27.37	6.14	4
+GameObject	GardenWestArea	MetalScrap 1_27	-30.65	35.06	0
+GameObject	GardenWestArea	MetalScrap 1 (1)_37	-27.49	35.11	0
+GameObject	CavesEntrance	KeyDoor_KeyDoorHorizontal_Up	0	30.74	0
+GameObject	GardenShurikenPuzzle1	MetalScrap 2 (3)_4	40.02	4.87	0
+GameObject	GardenShurikenPuzzle1	MetalScrap 2 (1)_1	-43.7	4.5	0
+GameObject	GardenShurikenPuzzle1	MetalScrap 2 (2)_2	-24.7	-14	0
+GameObject	GardenShurikenPuzzle1	MetalScrap 2 (4)_5	-23.7	5	0
+GameObject	GardenShurikenPuzzle1	MetalScrap 1 (1)_6	31.79	-23.53	0
+GameObject	GardenShurikenPuzzle1	MetalScrap 1_0	-9	-15	0
+GameObject	GardenShurikenPuzzle2	MetalScrap 2_29	-25.31	7.84	8
+GameObject	GardenShurikenPuzzle2	MetalScrap 1_9	-13.41	4.1	4
+GameObject	GardenShurikenPuzzle2	MetalScrap 1 (1)_10	17.8	20.22	0
+GameObject	GardenCorruptedArea	MetalScrap 1 (1)_0	-27.07	-35.71	0
+GameObject	GardenCorruptedArea	MetalScrap 1 (2)_0	9.98	-20.21	0
+GameObject	GardenCorruptedArea	MetalScrap 1_0	-40.85	-35.71	0
+GameObject	GardenShurikenCorridor1	MetalScrap 2 (3)_3	78.93	-28.15	0
+GameObject	GardenShurikenCorridor1	MetalScrap 2 (8)_8	99.47	-1.99	0
+GameObject	GardenShurikenCorridor1	MetalScrap 2 (6)_6	-34.53	16.12	0
+GameObject	GardenShurikenCorridor1	MetalScrap 2 (1)_1	39.19	-26.54	0
+GameObject	GardenShurikenCorridor1	MetalScrap 2 (7)_7	99.47	4.01	0
+GameObject	GardenShurikenCorridor1	MetalScrap 2 (4)_4	-35.39	9.11	0
+GameObject	GardenShurikenCorridor1	MetalScrap 2_0	28.02	12.62	0
+GameObject	GardenShurikenCorridor1	MetalScrap 2 (2)_2	54.65	-26.82	0
+GameObject	GardenShurikenCorridor1	MetalScrap 2 (5)_5	-36.39	12.87	0
+GameObject	GardenNorthCaveEntrance	MetalScrap 1 (1)_0	11.92	-34.48	0
+GameObject	GardenNorthCaveEntrance	MetalScrap 1 (2)_0	17.96	-34.19	0
+GameObject	GardenNorthCaveEntrance	MetalScrap 1_0	2.14	-5	0
+GameObject	CavesNorthEntrance	MetalScrap 2_6	5.32	27.54	4
+GameObject	CavesShurikenRoom	MetalScrap 444 (1)_0	94.27	18.46	0
+GameObject	CavesShurikenRoom	MetalScrap 444_0	59.2696	23.95649	0
+GameObject	CavesShurikenRoom	MetalScrap 1 (1)_9	-23.27	80.35	0
+GameObject	CavesShurikenRoom	MetalScrap 1_8	-23.27	67.35	0
+GameObject	GardenJumpCorridor2	MetalScrap 2_24	-9.12	-42.51	0
+GameObject	GardenJumpCorridor2	MetalScrap 2 (1)_26	-12.82	-43.07	0
+GameObject	GardenJumpCorridor2	MetalScrap 2 (2)_27	-16.03	-42.01	0
+GameObject	SuburbsDowntownConnection	MetalScrap 1 (2)_0	0.98	10.14	0
+GameObject	SuburbsDowntownConnection	MetalScrap 1_0	1.77	1.85	0
+GameObject	SuburbsDowntownConnection	MetalScrap 1 (1)_0	32.91	16.18	0
+GameObject	SuburbsMuseumConnection	MetalScrap 1_18	21.93	11.87	0
+GameObject	MuseumStreet	MetalScrap 1 (2)_18	-61.11	-10.57	0
+GameObject	MuseumStreet	MetalScrap 1 (1)_16	37.97	28.49	0
+GameObject	MuseumEntranceF2	MetalScrap 2_27	-10.6	-15.5	0
+GameObject	MuseumEntranceF2	RockBlock_RockBlock (2)	-0.57	-2.96	0
+GameObject	MuseumEntranceF2	RockBlock_RockBlock (1)	-3.57	-1.73	0
+GameObject	MuseumEntranceF2	RockBlock_RockBlock (4)	3.93	-2.46	0
+GameObject	MuseumEntranceF2	RockBlock_RockBlock (3)	2.43	-4.96	0
+GameObject	MuseumEntrance	MetalScrap 2 (2)33_20	19.98	-1.1	0
+GameObject	MuseumEntrance	MetalScrap 2 (1)_17	14.85	-25.5	0
+GameObject	MuseumEntrance	MetalScrap 2_16	-14.65	-35.5	0
+GameObject	MuseumEntrance	RockBlock_RockBlock33333	15.65	-21.1	0
+GameObject	MuseumEntrance	RockBlock_RockBlock33333 (1)	12.65	-19.6	0
+GameObject	MuseumCircularRailRoom	MetalScrap 1_0	-3.37	2.46	0
+GameObject	MuseumCircularRailRoom	MetalScrap 1 (1)_0	106.25	-22.3	0
+GameObject	MuseumKeyRoom2	MetalScrap 1_0	0.64	-53.81	0
+GameObject	MuseumMoonDeviceCorridor	KeyDoor_KeyDoorVertical_Right	-73	-9	0
+GameObject	MuseumMoonDeviceCorridor	MetalScrap 2_12	-29.22	-31.3	0
+GameObject	MuseumMoonDeviceCorridor	MetalScrap 1_21	14.34	-24.7	3
+GameObject	MuseumMoonDeviceCorridor	MetalScrap 1 (1)_22	-67.3	-19.7	3
+GameObject	MuseumBasement	MetalScrap 2_25	9.59	-15.85	0
+GameObject	MuseumBasement	MetalScrap 2 (1)_26	13.62	-27.89	0
+GameObject	AquariumSpikeCorridor1	KeyDoor_KeyDoorVertical_Right	58.7	30.99	0
+GameObject	AquariumSpikeCorridor1	MetalScrap 2_3	27.46	26.88	4
+GameObject	AquariumIceBlockPuzzle1	MetalScrap 1_13	-84.69	23.45	0
+GameObject	AquariumVerticalTube1	RockBlock_RockBlock (1)	34.93	-5.51	0
+GameObject	AquariumVerticalTube1	RockBlock_RockBlock	43.71	27.08	0
+GameObject	AquariumKeyRoom	MetalScrap 1_16	15.83	5.198984	0
+GameObject	AquariumNorthCorridor	MetalScrap 2_10	52.91	37.97	0
+GameObject	AquariumNorthCorridor	MetalScrap 2222_0	79.16	32.57	0
+GameObject	AquariumNorthCorridor	RockBlock_RockBlock (2)	66.87	13.88	0
+GameObject	AquariumNorthCorridor	RockBlock_RockBlock (1)	64.9	11.11	0
+GameObject	AquariumNorthCorridor	RockBlock_RockBlock	61.96	12.37	0
+GameObject	AquariumMiniboss	RockBlock_RockBlock	79.98	42.88	0
+GameObject	AquariumMiniboss	RockBlock_RockBlock (1)	82.93	40.58	0
+GameObject	AquariumNorthElevator	MetalScrap 1 (1)_6	70	17	0
+GameObject	AquariumCentralRoom	KeyDoor_KeyDoorHorizontal_Down	77.5	-69.5	0
+GameObject	AquariumCentralRoom	KeyDoor_KeyDoorVertical_Right	72	15	0
+GameObject	AquariumCentralRoom	MetalScrap 2 (4)_38	43.88	3.93	4
+GameObject	AquariumCentralRoom	MetalScrap 2 (1)_13	51.9	-47	0
+GameObject	AquariumCentralRoom	MetalScrap 2_11	7.9	-23.5	0
+GameObject	AquariumCentralRoom	RockBlock_RockBlock	56.91	-28.87	0
+GameObject	SuburbsFillRoom1	MetalScrap 1_13	-59.27	53.51	0
+GameObject	SuburbsTerminal	RockBlock_RockBlock (1)	23.87	18.88502	0
+GameObject	SuburbsTerminal	RockBlock_RockBlock	20.69	18.88502	0
+GameObject	SuburbsFillRoom2	MetalScrap 1 (1)_0	24.53	50.23	0
+GameObject	SuburbsFillRoom2	MetalScrap 1_0	29.01	53.97	0
+GameObject	AquariumBlackoutCorridor	MetalScrap 2_0	120.396	26.62181	0
+GameObject	AquariumKeyRoom2	MetalScrap 1 (1)_11	57	11.5	0
+GameObject	AquariumKeyRoom2	MetalScrap 1_7	120	27	0
+GameObject	AquariumHorizontalTube1	RockBlock_RockBlock (1)	67.18	13.62	0
+GameObject	AquariumHorizontalTube1	RockBlock_RockBlock (6)	88.32	18.57	0
+GameObject	AquariumHorizontalTube1	RockBlock_RockBlock (2)	69.68	10.62	0
+GameObject	AquariumHorizontalTube1	RockBlock_RockBlock (3)	79.32	19.57	0
+GameObject	AquariumHorizontalTube1	RockBlock_RockBlock	68.68	16.62	0
+GameObject	SuburbsRailsGrindRoom	MetalScrap 2 (3)_0	18.07	-64.27	0
+GameObject	SuburbsRailsGrindRoom	MetalScrap 2 (4)_0	-93.4	-53.8	0
+GameObject	SuburbsRailsGrindRoom	MetalScrap 2_0	10.78	-108.97	0
+GameObject	SuburbsRailsGrindRoom	MetalScrap 2 (1)_0	78.06	-109.47	0
+GameObject	SuburbsRailsGrindRoom	RockBlock_RockBlock (1)	151.16	-78.7	0
+GameObject	SuburbsRailsGrindRoom	RockBlock_RockBlock	151.16	-76.27	0
+GameObject	AquariumStreet	MetalScrap 1 (3)_3	-64.92	-3.1	0
+GameObject	AquariumStreet	MetalScrap 1 (2)_2	-49.08	19.8	9
+GameObject	AquariumStreet	MetalScrap 1 (4)_4	-61.35	-9.75	0
+GameObject	AquariumStreet	MetalScrap 1 (1)_1	9.15	2.7	0
+GameObject	AquariumStreet	MetalScrap 1_0	4.79	-17.89	0
+GameObject	AquariumStreet	RockBlock_RockBlock (1)	-28.89	-13.08	0
+GameObject	AquariumStreet	RockBlock_RockBlock (2)	-32.07	-11.9	0
+GameObject	AquariumStreet	RockBlock_RockBlock (4)	-19.15	-18.97	0
+GameObject	AquariumStreet	RockBlock_RockBlock	-43.38	-12.09	0
+GameObject	AquariumStreet	RockBlock_RockBlock (6)	-17.13	-22.39	0
+GameObject	AquariumStreet	RockBlock_RockBlock (3)	-46.49	-13.14	0
+GameObject	AquariumStreet	RockBlock_RockBlock (5)	-25.61	-10.88	0
+GameObject	AquariumEntrance	MetalScrap 1_36	61.38	37.662	0
+GameObject	AquariumEntrance	MetalScrap 1 (1)_26	42	40.5	0
+GameObject	AquariumEntranceCorridor	MetalScrap 1 (1)_17	90.34	18.15	0
+GameObject	AquariumEntranceCorridor	MetalScrap 1_13	41.84	18.64933	0
+GameObject	MuseumOptionalRail	MetalScrap 2 (2)_0	93.72	-41.04	0
+GameObject	MuseumOptionalRail	MetalScrap 2 (1)_0	34.75	2.480675	0
+GameObject	MuseumOptionalRail	MetalScrap 2_0	67.28834	2.480675	0
+GameObject	CavesMinecartPuzzleZero	MetalScrap 2 (1)_0	9.73	-3.58	0
+GameObject	CavesMinecartPuzzleZero	MetalScrap 2_0	2.65	-3.58	0
+GameObject	CavesMinecartMainPuzzle	MetalScrap 1 (2)_10	-6.6	59.4	0
+GameObject	CavesMinecartMainPuzzle	MetalScrap 1 (3)_11	-13.1	59.4	0
+GameObject	CavesMinecartMainPuzzle	MetalScrap 1 (1)_9	38.4	27	0
+GameObject	CavesMinecartMainPuzzle	MetalScrap 1_8	45.04	-12.18	4
+GameObject	CavesPond	MetalScrap 1 (3)_13	53.79	25.08	0
+GameObject	CavesPond	MetalScrap 1_11	34	15.5	0
+GameObject	CavesPond	MetalScrap 1 (4)_14	53.79	21.15	0
+GameObject	CavesMinecartBarrierPuzzle	MetalScrap 2 (2)_12	26.98	-4.69	0
+GameObject	CavesMinecartBarrierPuzzle	MetalScrap 2 (1)_11	-33.41	5.8	0
+GameObject	CavesMinecartBarrierPuzzle	MetalScrap 2_10	-37.33	-33.96	0
+GameObject	CavesShrineElevator	MetalScrap 2_6	23.8	36.2	0
+GameObject	CavesShrineElevator	MetalScrap 1_0	-31.39	3.67	0
+GameObject	SuburbsRailsEntrance	RockBlock_RockBlock	41	-88.9337	0
+GameObject	SuburbsRailsEntrance	RockBlock_RockBlock (5)	41	-91.85	0
+GameObject	SuburbsRailsEntrance	RockBlock_RockBlock (6)	40.11	-94.4	0
+GameObject	SuburbsRailsLibraryEntrance	KeyDoor_KeyDoorHorizontal_Up	46.5	-25.06	0
+GameObject	SuburbsRailsLibraryEntrance	RockBlock_RockBlock (2)	50.11	-55.84	0
+GameObject	SuburbsRailsLibraryEntrance	RockBlock_RockBlock	50.96	-50.29	0
+GameObject	SuburbsRailsLibraryEntrance	RockBlock_RockBlock (1)	52.3	-53.13	0
+GameObject	MuseumDarkRailRoom	KeyDoor_KeyDoorHorizontal_Up	19.5	-20.5	0
+GameObject	DowntownCrumblingBuilding	MetalScrap 1 (1)_8	-22.8	-20.58	0
+GameObject	DowntownCrumblingBuilding	MetalScrap 1_7	-20.43	-41.11	0
+GameObject	DowntownFinalPuzzle	KeyDoor_KeyDoorHorizontal_Up	16.5	22	0
+GameObject	DowntownFinalPuzzle	MetalScrap 222_0	-38.05363	-23.35485	0
+GameObject	DowntownFinalPuzzle	RockBlock_RockBlock	29.23	-8.16	0
+GameObject	DowntownFinalPuzzle	RockBlock_RockBlock (1)	30.23	-11.16	0
+GameObject	DowntownHoleRoom	MetalScrap 1 (1)_19	-35.14	-25.58	4
+GameObject	DowntownSuburbsRailsElevator	MetalScrap 1_9	1.22	-18.01	0
+GameObject	SewersDowntownElevator	MetalScrap 2_14	5.49	5.7	0
+GameObject	SewersMainWaterway	MetalScrap 2_16	37.32	2.58	0
+GameObject	SewersMainWaterway	RockBlock_RockBlock	40.22	21.61	0
+GameObject	SewersMainWaterway	RockBlock_RockBlock (1)	40.22	18.61	0
+GameObject	SewersCentralRoom	MetalScrap 2_0	36.67	29.08	0
+GameObject	SewersCentralRoom	MetalScrap 2 (4)_4	-37.5	74	0
+GameObject	SewersCentralRoom	MetalScrap 2 (3)_3	-4.38	28.16	0
+GameObject	SewersCentralRoom	MetalScrap 2 (1)_1	-39.1	46.5	0
+GameObject	SewersCentralRoom	MetalScrap 2 (5)_5	-47.5	62.5	0
+GameObject	SewersCentralRoom	MetalScrap 2 (2)_2	-32.51	-1.6	0
+GameObject	SewersCentralRoom	MetalScrap 2 (6)_6	-51.48	9.66	0
+GameObject	SewersCentralRoom	MetalScrap 2 (7)_7	-1.38	37.56	0
+GameObject	SewersTerminal	MetalScrap 1_0	39	-15	0
+GameObject	SewersCrossroads	MetalScrap 2_11	-30.2	21.6	0
+GameObject	SewersCrossroads	MetalScrap 2 (2)_15	-34.18	-25.62	0
+GameObject	SewersCrossroads	MetalScrap 2 (1)_14	-40.74	-25.79	0
+GameObject	SewersNorthPassage	MetalScrap 1_0	-47.5	-5	0
+GameObject	DowntownGardenEntrance	MetalScrap22 (1)_15	-40.69	-3.59	0
+GameObject	DowntownGardenEntrance	MetalScrap22_14	4.4	-43.2	0
+GameObject	DowntownGardenEntrance	MetalScrap 1_13	10.3	-16.45	0
+GameObject	DowntownChurch	MetalScrap 1_0	14.97	-30.9	0
+GameObject	DowntownChurch	MetalScrap 1 (2)_0	11.1	1.63	0
+GameObject	DowntownChurch	MetalScrap 1 (1)_0	58.6	-10.37	0
+GameObject	DowntownChurch	RockBlock_RockBlock (5)aaa (1)	17.47	9.8	0
+GameObject	DowntownChurch	RockBlock_RockBlock (5)aaa (2)	20.47	9.8	0
+GameObject	DowntownChurch	RockBlock_RockBlock (5)aaa	14.47	9.8	0
+GameObject	DowntownLargeRoom	MetalScrap 2 (2)_5	-64.1	-29.9	0
+GameObject	DowntownLargeRoom	MetalScrap 2_3	5.17	1.4	0
+GameObject	DowntownLargeRoom	MetalScrap 2 (1)_4	8.98	-15.77	6
+GameObject	SuburbsRailsSouthElevator	MetalScrap 2_0	-3.41	-9.17	0
+GameObject	SuburbsRailsSouthElevator	MetalScrap 1_1	-0.17	-9.17	0
+GameObject	SuburbsRailsChipCopyEntrance	MetalScrap 2_0	-46.71532	-43.57618	0
+GameObject	SuburbsRailsChipCopyEntrance	MetalScrap 2 (1)_0	-37.43	-43.57618	0
+GameObject	SuburbsRailsFirstHookshotRoom	KeyDoor_KeyDoorVertical_Left	-80.87	-106.57	0
+GameObject	SuburbsRailsCombatRoom	MetalScrap 2_0	-83.26	-100.28	0
+GameObject	AquariumLake	MetalScrap 1_29	-74.06	15.32	0
+GameObject	AquariumLake	RockBlock_RockBlock (2)	-39.57	18.54	0
+GameObject	AquariumLake	RockBlock_RockBlock (1)	-42.6	19.48	0
+GameObject	AquariumLake	RockBlock_RockBlock (3)	-36.49	19.44	0
+GameObject	AquariumIceBlockPuzzle4	KeyDoor_KeyDoorHorizontal_Down	79.5	-30	0
+GameObject	AquariumIceBlockPuzzle4	MetalScrap 1 (1)_21	84.48	6.8	0
+GameObject	AquariumIceBlockPuzzle4	MetalScrap 1_20	54.52	28.97	0
+GameObject	AquariumIceBlockPuzzle3	MetalScrap 2sss_0	36.27	8.67	0
+GameObject	AquariumIceBlockPuzzle3	MetalScrap 1 (1)_12	-12.21	13.3	0
+GameObject	AquariumIceBlockPuzzle3	MetalScrap 1 (2)_13	56.05	33.74	0
+GameObject	AquariumIceBlockPuzzle3	MetalScrap 1_9	-11.93809	27.06	0
+GameObject	MuseumLabyrinth	MetalScrap 1 (2)_2	-27.02	0.37	0
+GameObject	MuseumLabyrinth	MetalScrap 1_0	18.98	-10.13	0
+GameObject	MuseumLabyrinth	MetalScrap 1 (1)_1	12.48	8.87	0
+GameObject	MuseumLabyrinth	RockBlock_RockBlock (2)	-10.63	7.75	0
+GameObject	MuseumLabyrinth	RockBlock_RockBlock	-25.28	-21.04	0
+GameObject	MuseumLabyrinth	RockBlock_RockBlock (3)	-7.63	7.75	0
+GameObject	MuseumPrizeRoom	MetalScrap 2_0	-10.28	-15.37	0
+GameObject	MuseumPrizeRoom	MetalScrap 2 (3)_0	-8.84	-30.2	0
+GameObject	MuseumPrizeRoom	MetalScrap 2 (1)_0	15.79	-23.03	0
+GameObject	MuseumPrizeRoom	MetalScrap 2 (5)_0	-8.71	-22.7	0
+GameObject	MuseumPrizeRoom	MetalScrap 2 (2)_0	15.79	-29.25	0
+GameObject	FlashbackRoom	RockBlock_RockBlock	65.68	16.62	0
+GameObject	FlashbackRoom	RockBlock_RockBlock (2)	69.68	10.62	0
+GameObject	FlashbackRoom	RockBlock_RockBlock (3)	79.32	19.57	0
+GameObject	FlashbackRoom	RockBlock_RockBlock (6)	88.32	18.57	0
+GameObject	IndustriesMainStreet	MetalScrap 1 (3)_3	-1.5	36.3	0
+GameObject	IndustriesMainStreet	MetalScrap 1 (1)_22	-5.01	47.29	5
+GameObject	IndustriesMainStreet	MetalScrap 1_2	-58.08	47.29	6
+GameObject	IndustriesElevator	MetalScrap 1_2	-71.45	61.78	0
+GameObject	FlashbackRoom	RockBlock_RockBlock (7)	40.11	-94.4	0
+GameObject	FlashbackRoom	RockBlock_RockBlock (8)	41	-88.9337	0
+GameObject	FlashbackRoom	RockBlock_RockBlock (9)	41	-91.85	0
+GameObject	IndustriesTutorial	MetalScrap 1_1	-59.16	47.46	5
+GameObject	FactoryGates	MetalScrap 2 (3)_2	-100.76	45.51	0
+GameObject	FactoryGates	MetalScrap 2 (2)_1	-121.73	73.32	6
+GameObject	FactoryGates	MetalScrap 2_0	-144.77	57.76	0
+GameObject	FactoryEntrance	KeyDoor_KeyDoorVertical_Right	50.90107	14	0
+GameObject	FactoryEntrance	MetalScrap 1_0	10.42	25.41	0
+GameObject	FactoryEntrance	MetalScrap 1 (1)_1	46.42	29.91	0
+GameObject	FactoryEntrance	MetalScrap 1 (2)_2	-45.64	25.71	0
+GameObject	FactoryLavaButtonRoom	SafeDoor_SafeDoor	1	29.5	0
+GameObject	FactoryMissileRoom	SafeDoor_SafeDoor (1)	-7	38.5	0
+GameObject	FactoryMissileRoom	SafeDoor_SafeDoor (3)	47	60.5	0
+GameObject	FactoryMissileRoom	SafeDoor_SafeDoor (2)	12	38.5	0
+GameObject	FactoryMissileRoom	SafeDoor_SafeDoor	12	27	0
+GameObject	FactoryMissileRoom	SafeDoor_SafeDoor (4)	11	63	0
+GameObject	FactoryPreBossRoom	SafeDoor_SafeDoor	2.5	23.51	0
+GameObject	GardenDeepForest	EnergyPlatform (1)	-55.58	14.37	0
+GameObject	GardenDeepForest	EnergyPlatform (4)	-96.23999	3.06	0
+GameObject	GardenDeepForest	EnergyPlatform (2)	-73.28	5.74	0
+GameObject	GardenDeepForest	EnergyPlatform	-55.64	-5.6	0
+GameObject	GardenDeepForest	EnergyPlatform (3)	-73.28	-1.76	0
+GameObject	AquariumStreet	EnergyPlatform	-28.14	12.75	9
+GameObject	MuseumBackdoor	MetalScrap 1_0	-41.43	-1.78	0
+GameObject	MuseumBackdoor	MetalScrap 1 (1)_0	-41.21	15.29	0
+GameObject	MuseumKeyRoom2	PlatC	-0.84	-17.43	0
+GameObject	MuseumKeyRoom2	EnergyPlatform (3)	-1.93	-40.08	0
+GameObject	MuseumKeyRoom2	EnergyPlatform (2)	-11.12	-40.08	0
+GameObject	MuseumKeyRoom2	PlatA	-17.25	-25.84	0
+GameObject	MuseumKeyRoom2	Plat B	-6.84	-25.84	0
+GameObject	GlobalGameManagerScene	Barrier	31	17.5	0
+GameObject	DowntownBallPuzzle	EnergyPlatform	22.5	17.5	0
+GameObject	DowntownBallPuzzle	Barrier	31	17.5	0
+GameObject	DowntownPushPuzzle	BoxPositionSaveTrigger	1	7	0
+GameObject	DowntownPushPuzzle	BoxPositionSaveTrigger2	44.5	-13.6	0
+GameObject	AquariumEntrance	BoxPositionSaveTrigger	60.44	23.45	0
+GameObject	SuburbsRailsMainSwitchRoom	BoxPositionSaveTrigger (1)	-69.057	0	0
+GameObject	SuburbsRailsLibraryLeft	MetalScrap 2_0	-52.41	3.9	10
+GameObject	MuseumLibraryConnection	BoxPositionSaveTrigger (1)	8.7	-25.76921	0
+GameObject	MuseumLibraryConnection	MetalScrap 2_0	-3.59	-16.4	0
+GameObject	MuseumLibraryConnection	MetalScrap 2 (5)_5	12.6	-25.28	0
+GameObject	MuseumLibraryConnection	MetalScrap 2 (4)_4	-12.88	-25.28	0
+GameObject	MuseumMoonDeviceCorridor	BoxPositionSaveTrigger (2)	-5.5	-16.5	0
+GameObject	MuseumMoonDeviceCorridor	BoxPositionSaveTrigger (1)	35.94	-16.58	0
+GameObject	MuseumMoonDeviceCorridor	Barrier	-62	-35.63	0
+GameObject	MuseumKeyRoom	Barrier	-5.9	-31.48	0
+GameObject	MuseumMoonDeviceCorridor	MetalScrap 1_20	14.34	-24.7	3
+GameObject	MuseumMoonDeviceCorridor	MetalScrap 1 (1)_21	-67.3	-19.7	3
+GameObject	MuseumMoonDeviceCorridor	MuseumLightSwitch_EyeSpinButton (2)	-62.04	-35.5	0
+GameObject	DowntownJumpRoom	Barrier	-31.25	35.70023	0
+GameObject	DowntownIndustrialZoneEntrance	Barrier	24.99	-25.09	0
+GameObject	AquariumStreet	BoxPositionSaveTrigger	-49.5	15.5	0
+GameObject	AquariumLake	BoxPositionSaveTrigger	-88.63	3.35	0
+GameObject	AquariumIceBlockPuzzle3	Barrier	32.47	21.78	0
+GameObject	IndustriesSouth	MetalScrap 1 (1)_8	-109.48	40.12	5
+GameObject	IndustriesSouth	MetalScrap 1 (2)_9	-50.73	51.56	3
+GameObject	IndustriesSouth	MetalScrap 1_7	-36.69	43.1	5
+GameObject	MuseumStreet	BoxPositionSaveTrigger (4)	-45.9	10.3	0
+GameObject	MuseumStreet	BoxPositionSaveTrigger (3)	-4.01	6.08	0
+GameObject	AquariumEntrance2	MetalScrap 2_18	43.1	11.26	0
+GameObject	GardenShurikenCorridor2	BoxPositionSaveTrigger	20	-6	0
+GameObject	GardenShurikenCorridor2	BoxPositionSaveTrigger (2)	55.89	-11.95	0
+GameObject	GardenShurikenCorridor2	BoxPositionSaveTrigger (1)	43.32	-9.01	0
+GameObject	GardenJumpCorridor2	BoxPositionSaveTrigger	30.3	11.87	0
+GameObject	GardenJumpCorridor2	BoxPositionSaveTrigger 2	19.5	-19.5	0
+GameObject	GardenJumpCorridor2	BoxPositionSaveTrigger (1)	73.97	2.54	0
+GameObject	GardenJumpCorridor2	BoxPositionSaveTrigger 3	1	-22.5	0
+GameObject	GardenJumpCorridor2	Barrier (1)	-38.1	-27.5	0
+GameObject	GardenJumpCorridor2	Barrier 2	-45.04071	-2.486196	0
+GameObject	GardenJumpCorridor2	Barrier	5.4	24.95	0
+GameObject	DowntownAxeRoom	MetalScrap 1 (2)_9	17.02	-7.7	0
+GameObject	DowntownAxeRoom	MetalScrap 1 (3)_10	12.66	-2.53	0
+GameObject	DowntownAxeRoom	MetalScrap 1_7	-13.8	-30.17	0
+GameObject	DowntownAxeRoom	MetalScrap 1 (1)_8	4.58	-3.87	0
+GameObject	DowntownAxeRoom	RockBlock_RockBlock (2)	5.92	-62.15	0
+GameObject	DowntownAxeRoom	RockBlock_RockBlock (1)	8.92	-62.15	0
+GameObject	DowntownAxeRoom	RockBlock_RockBlock	11.92	-62.15	0
+GameObject	DowntownMiniboss1	Barrier	-12.5	-34.44	0
+GameObject	FactoryPrePuzzle2	KeyDoor_KeyDoorVertical_Up	58.5	21	0
+GameObject	FactoryPrePuzzle2	MetalScrap 1_0	38.13	1.06	0
+GameObject	FactoryPrePuzzle2	MetalScrap 1 (1)_1	46.06	8.16	0
+GameObject	FactoryPrePuzzle2	MetalScrap 1 (3)_3	57.41	-3.87	0
+GameObject	FactoryPrePuzzle2	MetalScrap 1 (5)_5	38.38	17.2	0
+GameObject	FactoryPrePuzzle2	MetalScrap 1 (2)_2	57.35	8.09	0
+GameObject	FactoryPrePuzzle2	MetalScrap 1 (4)_4	38.38	24.67	0
+GameObject	FactoryMuseumConnection	metalll_0	36.4	10.53	0
+GameObject	FactoryMuseumConnection	metallll3_0	27.74	5.07	0
+GameObject	FactoryMuseumConnection	SafeDoor_SafeDoor	32	13.5	0
+GameObject	FactoryMuseumConnection	SafeDoor_SafeDoor (1)	35.5	34.5	0
+GameObject	CavesPond	Barrier	26.71	32.72	0
+GameObject	CavesCorridor	BoxPositionSaveTrigger	17.2	37.4	0
+GameObject	AquariumCentralRoom	MetalScrap 2 (2)_14	57.07	-28.42	0
+GameObject	FactoryPuzzle1	Barrier	47.151	29.28	0
+GameObject	FactoryPuzzle1	MetalScrap 444_0	36.99385	12.64254	0
+GameObject	FactoryArmRoom	MetalScrap 1_0	-38.65	11.31	0
+GameObject	FactoryArmRoom	MetalScrap 1 (1)_1	5.85	-7.69	0
+GameObject	FactoryArmRoom	MetalScrap 1 (2)_2	32.1	11.05	0
+GameObject	ChurchEntrance	MetalScrap 2_0	142.88	27.19	5
+GameObject	ChurchEntrance	MetalScrap 2 (1)_0	174.02	27.19	5
+GameObject	ChurchFinalRoom	Barrier	206.94	24.4	0
+GameObject	ChurchDarkMonsterRoom	Barrier	228.17	18.02	0
+GameObject	ChurchHookshotRoom	KeyDoor_KeyDoorVertical_Up	283.5	-24.5	0
+GameObject	ChurchHookshotRoom	MetalScrap 2 (3)_16	191.6	61.32	0
+GameObject	ChurchHookshotRoom	MetalScrap 2 (1)_14	204.68	-5.33	0
+GameObject	ChurchHookshotRoom	MetalScrap 2 (2)_15	120.24	29	0
+GameObject	ChurchHookshotRoom	MetalScrap 2_13	265.54	-33.08	0
+GameObject	AquariumExternalCombatRoom	BoxPositionSaveTrigger	-58.05	11.98	0
+GameObject	GardenDeepForest	Barrier	-102.09	2.89	0
+GameObject	AquariumWestElevator	BoxPositionSaveTrigger	63.5	37	0
+GameObject	AquariumWestElevator	MetalScrap 1_8	87.62	40.34721	4
+GameObject	AquariumWestElevator	MetalScrap 1 4343_10	39.23336	23.98837	0
+GameObject	CavesNestRoom	Barrier	2	22.9	0
+GameObject	SuburbsRailsGrindRoom	Barrier	173.91	-78.92	0
+GameObject	DowntownChurchCorridor	MetalScrap 1_0	147.6628	-15.59498	0
+GameObject	IndustriesElevator	EnergyPlatform	-93.25	45.95	0
+GameObject	GardenDoctorsTombstone	MetalScrap 1 (1)_0	-23.15	-6.16	0
+GameObject	GardenDoctorsTombstone	MetalScrap 1_0	-0.26	-17.7	0
