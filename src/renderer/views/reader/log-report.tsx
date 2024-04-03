@@ -10,9 +10,9 @@ export function LogReport(props: { logs: LogData }) {
     return (
         <div css={ReportStyle}>
             <div>Total Nodes: {nodeList.length}</div>
-            <div>Total Edges: {logs.edges.length}</div>
-            <div>Total Connections: {connections}</div>
+            <div>Active Edges: {logs.edges.length - redundant}</div>
             <div>Redundant Edges: {redundant}</div>
+            <div>Unique Connections: {connections}</div>
         </div>
     )
 }
@@ -21,8 +21,9 @@ const ReportStyle = css`
     border-radius: 5px;
     background-color: #222;
     color: white;
-    position: absolute;
     padding: 8px;
-    bottom: 5px;
-    left: 5px;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    z-index: 1;
 `;

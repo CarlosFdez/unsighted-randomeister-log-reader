@@ -1,6 +1,18 @@
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("./fonts/RobotoCondensed-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    font-style: italic;
+    src: url("./fonts/RobotoCondensed-Italic-VariableFont_wght.ttf");
+}
+
 html, body {
     padding: 0;
     margin: 0;
+    font-family: "Roboto Condensed";
 }
 
 ::-webkit-scrollbar {

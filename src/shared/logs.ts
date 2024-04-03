@@ -1,6 +1,40 @@
 import * as R from "remeda";
 
+/** A set of manually flagged actions that we are ignoring for the purposes of edge resolution */
+const IRRELEVANT_ACTIONS = new Set([
+    "Walk",
+    "Run",
+    "StaminaRecharge",
+    "DashAttack",
+    "Parry",
+    "Grind",
+    "JumpUp",
+    "CurvedJump",
+    "RunningDodge",
+    "RunningJump",
+    "WallClimb",
+]);
+
+/**
+ * Returns a copy of the edges where all statuses have been updated based on a set of criteria
+ * An edge is redundant if another edge if such that:
+ * 1) The actions after filtering are a superset of this edge's
+ * 2) The states after normalization are a subset of this edge
+ */
 export function processEdges(edges: EdgeData[]): EdgeData[] {
+    function filterActions(actions: Set<string>): Set<string> {
+        return new Set([...actions].filter((a) => !IRRELEVANT_ACTIONS.has(a)));
+    }
+
+    function normalizeStates(states: Set<string>): Set<string> {
+        const result = new Set<string>();
+        for (const state of states) {
+            // result.add(state);
+            result.add(state.replace(/RockBlock_(.*)_Broken/g, "RockBlock_Broken"));
+        }
+        return result;
+    }
+
     return R.pipe(
         R.clone(edges),
         R.groupBy((edge) => `${edge.sourceNode}|${edge.targetNode}`),
@@ -12,21 +46,19 @@ export function processEdges(edges: EdgeData[]): EdgeData[] {
             }
 
             // Find redundant edges in the group. Presort data so that higher gameTimes get marked off first
-            // An edge is redundant if another edge if such that:
-            // 1) The actions are a superset of this edge
-            // 2) The states after normalization are a subset of this edge
             const sortedGroup = R.sortBy(group, [(e) => e.gameTime, "desc"]);
             for (const edge of sortedGroup) {
-                const thisStates = normalizeStates(edge.states);
+                const actions = filterActions(edge.actions);
+                const states = normalizeStates(edge.states);
                 for (const testEdge of sortedGroup) {
                     if (testEdge.status === "redundant" || edge === testEdge) {
                         continue;
                     }
 
+                    const otherActions = filterActions(testEdge.actions);
                     const otherStates = normalizeStates(testEdge.states);
                     const isSuperset =
-                        isSupersetOf(edge.actions, testEdge.actions) &&
-                        isSupersetOf(thisStates, otherStates);
+                        isSupersetOf(actions, otherActions) && isSupersetOf(states, otherStates);
                     if (isSuperset) {
                         edge.status = "redundant";
                         break;
@@ -39,18 +71,10 @@ export function processEdges(edges: EdgeData[]): EdgeData[] {
     );
 }
 
-function normalizeStates(states: Set<string>): Set<string> {
-    const result = new Set<string>();
-    for (const state of states) {
-        // result.add(state);
-        result.add(state.replace(/RockBlock_(.*)_Broken/g, "RockBlock_Broken"));
-    }
-    return result;
-}
-
 /**
  * Computes what will change when inputting a new log.
  * Split from merging for confirmation dialog purposes.
+ * TODO: FINISH
  */
 export function getLogChanges(destination: LogData, newEntry: LogData) {
     const newActions = difference(newEntry.actions, destination.actions);

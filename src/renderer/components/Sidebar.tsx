@@ -7,7 +7,7 @@ export const SidebarStyle = css`
     filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.4));
 
     top: 8px;
-    right: 8px;
+    left: 8px;
     bottom: 8px;
     width: 340px;
     overflow: auto;

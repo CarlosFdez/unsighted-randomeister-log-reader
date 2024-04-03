@@ -19,14 +19,14 @@ const TopBarStyle = css`
     background-color: #222;
     border-radius: 5px;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 5;
 
     display: flex;
     align-items: center;
     gap: 5px;
     padding: 5px;
-    margin: 5px;
+    margin: 8px;
 
     a {
         color: white;
