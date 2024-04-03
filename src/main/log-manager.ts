@@ -1,5 +1,5 @@
 import { ipcMain } from "electron";
-import { DEFAULT_LOGS } from "../shared/logs";
+import { DEFAULT_LOGS, processEdges } from "../shared/logs";
 import { parse } from "csv-parse/sync";
 import fs from "node:fs/promises";
 import * as path from "node:path";
@@ -71,13 +71,14 @@ class LogManager {
             realTime: Number(data["real time"]),
             gameTime: Number(data["game time"]),
             timestamp: Number(data["timestamp"]),
+            status: "active",
         }));
 
         return {
             actions: new Set(Object.values(actionsById)),
             states: new Set(Object.values(statesById)),
             nodes: R.mapToObj(Object.values(nodesById), (n) => [n.key, n]),
-            edges,
+            edges: processEdges(edges),
         };
     }
 

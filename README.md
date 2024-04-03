@@ -12,6 +12,8 @@ $ npm install
 
 ### Development
 
+This project is built using Electron and React, uses EmotionJS for styling, and Typescript.
+
 ```bash
 $ npm run dev
 ```

@@ -4,7 +4,7 @@ interface LogData {
     states: Set<string>;
     /** Nodes mapped by key */
     nodes: Record<string, NodeData>;
-    edges: unknown;
+    edges: EdgeData[];
 }
 
 interface SceneData {
@@ -27,4 +27,8 @@ interface EdgeData {
     targetNode: string;
     actions: Set<string>;
     states: Set<string>;
+    realTime: number;
+    gameTime: number;
+    timestamp: number;
+    status: "active" | "redundant";
 }
