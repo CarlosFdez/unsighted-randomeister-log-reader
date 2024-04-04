@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import { forwardRef, useEffect, useRef } from "react";
 import { useDrop } from "react-dnd";
 
-import MapVersion2 from "../../assets/Texture2D/MapVersion2.png";
+import MapVersion2 from "../assets/Texture2D/MapVersion2.png";
 
 function toNumber(value: string | undefined | null) {
     return Number(value?.replace("px", "") || "0");

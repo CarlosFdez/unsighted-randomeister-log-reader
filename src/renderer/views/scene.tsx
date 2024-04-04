@@ -1,6 +1,6 @@
 import { useMatch } from "react-router-dom";
-import { useScenes } from "../../hooks";
-import { SidebarStyle } from "../../components/Sidebar";
+import { useScenes } from "../hooks";
+import { SidebarStyle } from "../components/Sidebar";
 
 export function SceneSidebarView() {
     const scenes = useScenes();

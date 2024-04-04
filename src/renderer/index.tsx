@@ -1,15 +1,19 @@
+import "./assets/main.css"
+
+import React from "react"
+import ReactDOM from "react-dom/client"
+
 import { Route, RouterProvider, createMemoryRouter, createRoutesFromElements } from 'react-router-dom'
 import { DndProvider } from 'react-dnd';
 import { useEffect, useState } from 'react';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { LogsContext } from './hooks';
 import { DEFAULT_LOGS } from '../shared/logs';
-import { HomeView, SceneList, SceneSidebarView } from './views/reader';
+import { HomeView, SceneSidebarView } from './views';
 
 const router = createMemoryRouter(
     createRoutesFromElements([
-        <Route element={<HomeView />}>
-            <Route path="/" element={<SceneList />} />
+        <Route path="/" element={<HomeView />}>
             <Route path="scenes/:sceneId" element={<SceneSidebarView />} />
         </Route>,
     ])
@@ -35,4 +39,8 @@ function App(): JSX.Element {
     );
 }
 
-export default App
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+)

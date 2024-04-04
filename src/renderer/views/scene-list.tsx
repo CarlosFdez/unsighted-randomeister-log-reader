@@ -1,4 +1,4 @@
-import { useScenes } from "../../hooks";
+import { SceneData, useScenes } from "../hooks";
 import { Link, ScrollRestoration } from "react-router-dom";
 import { css } from "@emotion/react";
 import { useDrag } from "react-dnd";
@@ -21,14 +21,20 @@ function SceneListEntry(props: { scene: SceneData }) {
     const [_collected, drag, dragPreview] = useDrag(() => ({
         type: "scene",
         item: { sceneName: scene.name }
-      }))
+    }));
+
+    const redundant = scene.edges.filter((e) => e.status === "redundant").length;
 
     return (
         <Link css={SceneListEntryStyle} to={`scenes/${scene.name}`} ref={dragPreview} draggable={false}>
             <span className="name" ref={drag}>
                 {scene.name}
             </span>
-            <span className="nodes">{scene.nodes.length} Nodes</span>
+            <span className="nodes">{scene.connections.length} Connections</span>
+            <span className="nodes">
+                {scene.edges.length} Edges
+                {redundant > 0 && <span className="redundant">({redundant} Redundant)</span>}
+            </span>
         </Link>
     );
 }
@@ -45,5 +51,14 @@ const SceneListEntryStyle = css`
     }
     .name {
         text-decoration: underline;
+    }
+    .nodes {
+        display: block;
+    }
+    .redundant {
+        color: #AA0000;
+        font-weight: 500;
+        font-size: 0.95em;
+        margin-left: 0.5ch;
     }
 `;

@@ -7,11 +7,6 @@ interface LogData {
     edges: EdgeData[];
 }
 
-interface SceneData {
-    name: string;
-    nodes: NodeData[];
-}
-
 interface NodeData {
     /** A key is an identifier that will work for the node across all logs */
     key: string;
