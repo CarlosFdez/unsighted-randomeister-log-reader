@@ -1,21 +1,23 @@
 import { SceneData, useScenes } from "../hooks";
-import { Link, ScrollRestoration } from "react-router-dom";
+import { Link, ScrollRestoration, useMatch } from "react-router-dom";
 import { css } from "@emotion/react";
 import { useDrag } from "react-dnd";
 import { SidebarStyle } from "@renderer/components/Sidebar";
 
 export function SceneList() {
     const scenes = useScenes();
-
+    const { sceneName } = useMatch("/scenes/:sceneName")?.params ?? {};
     return (
         <div css={SidebarStyle}>
             <ScrollRestoration />
-            {Object.values(scenes).map((s) => <SceneListEntry key={s.name} scene={s}/>)}
+            {Object.values(scenes).map((s) =>
+                <SceneListEntry key={s.name} scene={s} selected={sceneName === s.name}/>
+            )}
         </div>
     )
 }
 
-function SceneListEntry(props: { scene: SceneData }) {
+function SceneListEntry(props: { scene: SceneData, selected: boolean }) {
     const scene = props.scene;
 
     const [_collected, drag, dragPreview] = useDrag(() => ({
@@ -26,7 +28,12 @@ function SceneListEntry(props: { scene: SceneData }) {
     const redundant = scene.edges.filter((e) => e.status === "redundant").length;
 
     return (
-        <Link css={SceneListEntryStyle} to={`scenes/${scene.name}`} ref={dragPreview} draggable={false}>
+        <Link
+            css={SceneListEntryStyle}
+            to={`scenes/${scene.name}`}
+            ref={dragPreview}
+            draggable={false}
+            className={props.selected ? "selected" : ""}>
             <span className="name" ref={drag}>
                 {scene.name}
             </span>
@@ -46,7 +53,7 @@ const SceneListEntryStyle = css`
     color: unset;
     text-decoration: unset;
     padding: 4px 6px;
-    &:hover {
+    &:hover, &.selected {
         background-color: rgba(255, 255, 255, 0.8);
     }
     .name {

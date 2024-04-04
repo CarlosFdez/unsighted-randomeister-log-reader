@@ -1,8 +1,9 @@
 import { ipcMain } from "electron";
-import { DEFAULT_LOGS, processEdges } from "../shared/logs";
+import { DEFAULT_LOGS, getDuplicateEdges, processEdges } from "../shared/logs";
 import { parse } from "csv-parse/sync";
 import fs from "node:fs/promises";
 import * as path from "node:path";
+import { randomUUID } from "crypto";
 
 import * as R from "remeda";
 
@@ -52,34 +53,47 @@ class LogManager {
             },
         ]);
 
-        const edges = rawEdges.map<EdgeData>((data) => ({
-            sourceNode: nodesById[data.source].key,
-            targetNode: nodesById[data.target].key,
-            actions: new Set(
-                data.actions
-                    .split(",")
-                    .map((id) => actionsById[id])
-                    .filter(R.isTruthy),
-            ),
-            states: new Set(
-                data.states
-                    .split(",")
-                    .map((id) => statesById[id])
-                    .filter(R.isTruthy),
-            ),
-            sceneChange: data["scene change"] === "1",
-            realTime: Number(data["real time"]),
-            gameTime: Number(data["game time"]),
-            timestamp: Number(data["timestamp"]),
-            status: "active",
-        }));
+        const edges = (() => {
+            const edgeObjects = rawEdges.map<EdgeData>((data) => ({
+                key: randomUUID(),
+                sourceScene: nodesById[data.source].scene,
+                sourceNode: nodesById[data.source].key,
+                targetNode: nodesById[data.target].key,
+                actions: new Set(
+                    data.actions
+                        .split(",")
+                        .map((id) => actionsById[id])
+                        .filter(R.isTruthy),
+                ),
+                states: new Set(
+                    data.states
+                        .split(",")
+                        .map((id) => statesById[id])
+                        .filter(R.isTruthy),
+                ),
+                sceneChange: data["scene change"] === "1",
+                realTime: Number(data["real time"]),
+                gameTime: Number(data["game time"]),
+                timestamp: Number(data["timestamp"]),
+                status: "active",
+            }));
+            const processed = processEdges(edgeObjects);
+            const duplicates = getDuplicateEdges(processed, { exact: true });
+            const duplicateKeys = new Set(duplicates.map((e) => e.key));
+            return processed.filter((e) => !duplicateKeys.has(e.key));
+        })();
 
         return {
             actions: new Set(Object.values(actionsById)),
             states: new Set(Object.values(statesById)),
             nodes: R.mapToObj(Object.values(nodesById), (n) => [n.key, n]),
-            edges: processEdges(edges),
+            edges,
         };
+    }
+
+    /** Delete edges using their uuids */
+    deleteEdges(edgeKeys: Set<string>) {
+        this.data.edges = this.data.edges.filter((e) => !edgeKeys.has(e.key));
     }
 
     async save() {

@@ -18,10 +18,13 @@ interface NodeData {
 }
 
 interface EdgeData {
+    key: string; // a uniquely generated id to make server commands easier
+    sourceScene: string;
     sourceNode: string;
     targetNode: string;
     actions: Set<string>;
     states: Set<string>;
+    sceneChange: boolean;
     realTime: number;
     gameTime: number;
     timestamp: number;

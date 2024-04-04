@@ -15,18 +15,14 @@ export function TopBar() {
 }
 
 const TopBarStyle = css`
-    position: absolute;
     background-color: #222;
     border-radius: 5px;
-    top: 0;
-    right: 0;
     z-index: 5;
 
     display: flex;
     align-items: center;
     gap: 5px;
     padding: 5px;
-    margin: 8px;
 
     a {
         color: white;
@@ -40,5 +36,4 @@ const TopBarStyle = css`
             background-color: rgba(255, 255, 255, 0.2);
         }
     }
-
 `;

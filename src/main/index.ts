@@ -9,8 +9,8 @@ import "./listeners";
 function createWindow(): void {
     // Create the browser window.
     const mainWindow = new BrowserWindow({
-        width: 900,
-        height: 670,
+        width: 1020,
+        height: 700,
         show: false,
         ...(process.platform === "linux" ? { icon } : {}),
         webPreferences: {

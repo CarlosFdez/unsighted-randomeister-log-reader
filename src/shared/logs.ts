@@ -1,4 +1,5 @@
 import * as R from "remeda";
+import { difference, isSetEqual, isSupersetOf } from "./util";
 
 /** A set of manually flagged actions that we are ignoring for the purposes of edge resolution */
 const IRRELEVANT_ACTIONS = new Set([
@@ -15,6 +16,22 @@ const IRRELEVANT_ACTIONS = new Set([
     "WallClimb",
 ]);
 
+export function normalizeActions(actions: Set<string>): Set<string> {
+    return new Set([...actions].filter((a) => !IRRELEVANT_ACTIONS.has(a)));
+}
+
+export function normalizeStates(edge: EdgeData): Set<string> {
+    const result = new Set<string>();
+    for (const state of edge.states) {
+        const updatedState = state
+            .replace(`${edge.sourceScene}/`, "")
+            .replace("RockBlock_Rockblock", "RockBlock")
+            .replace(/RockBlock_(.*)_Broken/g, "RockBlock_Broken");
+        result.add(updatedState);
+    }
+    return result;
+}
+
 /**
  * Returns a copy of the edges where all statuses have been updated based on a set of criteria
  * An edge is redundant if another edge if such that:
@@ -22,19 +39,6 @@ const IRRELEVANT_ACTIONS = new Set([
  * 2) The states after normalization are a subset of this edge
  */
 export function processEdges(edges: EdgeData[]): EdgeData[] {
-    function filterActions(actions: Set<string>): Set<string> {
-        return new Set([...actions].filter((a) => !IRRELEVANT_ACTIONS.has(a)));
-    }
-
-    function normalizeStates(states: Set<string>): Set<string> {
-        const result = new Set<string>();
-        for (const state of states) {
-            // result.add(state);
-            result.add(state.replace(/RockBlock_(.*)_Broken/g, "RockBlock_Broken"));
-        }
-        return result;
-    }
-
     return R.pipe(
         R.clone(edges),
         R.groupBy((edge) => `${edge.sourceNode}|${edge.targetNode}`),
@@ -48,18 +52,24 @@ export function processEdges(edges: EdgeData[]): EdgeData[] {
             // Find redundant edges in the group. Presort data so that higher gameTimes get marked off first
             const sortedGroup = R.sortBy(group, [(e) => e.gameTime, "desc"]);
             for (const edge of sortedGroup) {
-                const actions = filterActions(edge.actions);
-                const states = normalizeStates(edge.states);
+                const actions = normalizeActions(edge.actions);
+                const states = normalizeStates(edge);
                 for (const testEdge of sortedGroup) {
                     if (testEdge.status === "redundant" || edge === testEdge) {
                         continue;
                     }
 
-                    const otherActions = filterActions(testEdge.actions);
-                    const otherStates = normalizeStates(testEdge.states);
+                    // Check for subset. If the post-normalization result is equal, then we prefer smaller real values
+                    const otherActions = normalizeActions(testEdge.actions);
+                    const otherStates = normalizeStates(testEdge);
                     const isSuperset =
-                        isSupersetOf(actions, otherActions) && isSupersetOf(states, otherStates);
+                        isSetEqual(actions, otherActions) && isSetEqual(states, otherStates)
+                            ? isSupersetOf(edge.actions, testEdge.actions) &&
+                              isSupersetOf(edge.states, testEdge.states)
+                            : isSupersetOf(actions, otherActions) &&
+                              isSupersetOf(states, otherStates);
                     if (isSuperset) {
+                        // Because this is *after* normalization, we want to prioritize the smaller every time
                         edge.status = "redundant";
                         break;
                     }
@@ -101,21 +111,23 @@ export function applyLogChanges(destination: LogData, changes: ReturnType<typeof
     // todo: figure out how to refresh scenes
 }
 
-/** Simple set difference, here until typescript/electron catches up */
-function difference<T>(set: Set<T>, other: Set<T>): Set<T> {
-    const result = new Set<T>();
-    for (const item of set) {
-        if (!other.has(item)) {
-            result.add(item);
-        }
-    }
-    return result;
-}
-
-/** Returns true if set is a subset of other, here until typescript/electron catches up */
-function isSupersetOf<T>(set: Set<T>, other: Set<T>): boolean {
-    if (set.size < other.size) return false;
-    return [...other].every((i) => set.has(i));
+export function getDuplicateEdges(edges: EdgeData[], { exact = false } = {}): EdgeData[] {
+    return R.pipe(
+        [...edges],
+        R.sortBy([(e) => e.realTime, "desc"]),
+        R.groupBy((e) => {
+            const actions = [...(exact ? e.actions : normalizeActions(e.actions))].sort();
+            const states = [...(exact ? e.states : normalizeStates(e))].sort();
+            return `${e.sourceNode}|${e.targetNode}|${actions.join(",")}|${states.join(",")}`;
+        }),
+        R.values,
+        R.filter((g) => g.length > 1),
+        R.map((g) => {
+            // Return all redundants in this group....but *just in case* make sure its never the whole group
+            const redundant = g.filter((g) => g.status === "redundant");
+            return redundant.length === g.length ? redundant.slice(1) : redundant;
+        }),
+    ).flat();
 }
 
 export const DEFAULT_LOGS: LogData = {

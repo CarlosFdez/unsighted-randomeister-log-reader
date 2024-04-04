@@ -16,16 +16,16 @@ html, body {
 }
 
 ::-webkit-scrollbar {
-	width: 9px;
-    height: 9px;
+    width: 10px;
+    height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-	background: #555;
+    background: #555;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #ddd;
-	border-radius: 1px;
-	border: 1px solid #00000066;
+    background-color: #acf;
+    border-radius: 1px;
+    border: 1px solid #00000066;
 }
