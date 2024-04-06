@@ -38,15 +38,16 @@ export function normalizeStates(edge: EdgeData): Set<string> {
  * 1) The actions after filtering are a superset of this edge's
  * 2) The states after normalization are a subset of this edge
  */
-export function processEdges(edges: EdgeData[]): EdgeData[] {
+export function processEdges(edges: EdgeData[], options: { disabled?: string[] } = {}): EdgeData[] {
+    const disabled = options.disabled ?? [];
     return R.pipe(
         R.clone(edges),
         R.groupBy((edge) => `${edge.sourceNode}|${edge.targetNode}`),
         R.values,
         R.flatMap((group) => {
-            // Set all to active first
+            // Set all to active first, unless its disabled
             for (const edge of group) {
-                edge.status = "active";
+                edge.status = !disabled.includes(edge.key) ? "active" : "redundant";
             }
 
             // Find redundant edges in the group. Presort data so that higher gameTimes get marked off first

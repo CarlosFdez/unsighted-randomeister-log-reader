@@ -2,7 +2,9 @@ import { useMatch } from "react-router-dom";
 import { ConnectionData, useScenes } from "../hooks";
 import { SidebarStyle } from "../components/Sidebar";
 import { css } from "@emotion/react";
-import { normalizeActions, normalizeStates } from "../../shared/logs";
+import { normalizeActions, normalizeStates, processEdges } from "../../shared/logs";
+import { IconPlus, IconX } from "@tabler/icons-react";
+import { useMemo, useState } from "react";
 
 export function SceneView() {
     const scenes = useScenes();
@@ -30,18 +32,33 @@ function ConnectionEntry(props: { connection: ConnectionData; scene?: string }) 
     const connection = props.connection;
     const sourceName = connection.source.scene === props.scene ? connection.source.location : connection.source.key;
     const targetName = connection.target.scene === props.scene ? connection.target.location : connection.target.key;
+
+    // Mark disabled, and reprocess edges when disabled updates
+    const [disabled, setDisabled] = useState<string[]>([]);
+    const edges = useMemo(() => {
+        return processEdges(connection.edges, { disabled });
+    }, [disabled, connection]);
+
     return (
         <div css={ConnectionEntryStyle}>
             <header>
                 <strong>{sourceName}</strong> to <strong>{targetName}</strong>
             </header>
-            {connection.edges.map((edge) => (
-                <div css={EdgeStyle({ status: edge.status })}>
-                    {edge.actions.size === 0 && edge.states.size === 0 ? <span>No actions or states required</span> : null}
-                    {[...normalizeActions(edge.actions)].map((a) => <span key={a}>{a}</span>)}
-                    {[...normalizeStates(edge)].map((s) => <span key={s}>{s}</span>)}
-                </div>
-            ))}
+            {edges.map((edge) => {
+                const edgeDisabled = disabled.includes(edge.key);
+                const removeIcon = edgeDisabled
+                    ? <IconPlus className="icon" size={14} onClick={() => setDisabled((current) => current.filter((c) => c !== edge.key))}/>
+                    : <IconX className="icon" size={14} onClick={() => setDisabled((current) => [...current, edge.key])}/>
+
+                return (
+                    <div key={edge.key} css={EdgeStyle({ status: edge.status, disabled: edgeDisabled })}>
+                        {removeIcon}
+                        {edge.actions.size === 0 && edge.states.size === 0 ? <span>No actions or states required</span> : null}
+                        {[...normalizeActions(edge.actions)].map((a) => <span key={a}>{a}</span>)}
+                        {[...normalizeStates(edge)].map((s) => <span key={s}>{s}</span>)}
+                    </div>
+                )
+            })}
         </div>
     );
 }
@@ -67,12 +84,23 @@ const ConnectionEntryStyle = css`
     }
 `;
 
-const EdgeStyle = (props: { status: EdgeData["status"] }) => css`
-    ${props.status === "redundant" ? "opacity: 0.6;" : null}
+const EdgeStyle = (props: { status: EdgeData["status"], disabled: boolean }) => css`
+    opacity: ${props.disabled || props.status === "redundant" ? 0.6 : 1};
+    ${props.disabled ? "text-decoration: line-through;" : null}
     display: flex;
+    align-items: center;
     gap: 3px;
     font-size: 0.9em;
     span {
         white-space: nowrap;
+    }
+    .icon {
+        cursor: pointer;
+        padding: 2px;
+        flex: 0 0 min-content;
+    }
+
+    &:has(.icon:hover) {
+        ${props.disabled ? null : "text-decoration: line-through;"}
     }
 `;
