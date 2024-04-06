@@ -45,18 +45,22 @@ export function processEdges(edges: EdgeData[], options: { disabled?: string[] }
         R.groupBy((edge) => `${edge.sourceNode}|${edge.targetNode}`),
         R.values,
         R.flatMap((group) => {
-            // Set all to active first, unless its disabled
-            for (const edge of group) {
-                edge.status = !disabled.includes(edge.key) ? "active" : "redundant";
+            // Set all redundant edges to unverified first, unless its disabled
+            for (const edge of group.filter((e) => e.status === "redundant")) {
+                edge.status = !disabled.includes(edge.key) ? null : "redundant";
             }
 
             // Find redundant edges in the group. Presort data so that higher gameTimes get marked off first
             const sortedGroup = R.sortBy(group, [(e) => e.gameTime, "desc"]);
             for (const edge of sortedGroup) {
+                // If this edge is set to active, don't update its status
+                if (edge.status === "active") continue;
+
                 const actions = normalizeActions(edge.actions);
                 const states = normalizeStates(edge);
                 for (const testEdge of sortedGroup) {
-                    if (testEdge.status === "redundant" || edge === testEdge) {
+                    // We only check for redundant compared to an active edge
+                    if (testEdge.status !== "active" || edge === testEdge) {
                         continue;
                     }
 

@@ -1,35 +1,34 @@
 import { useMatch } from "react-router-dom";
-import { ConnectionData, useScenes } from "../hooks";
+import { ConnectionData, useScene } from "../hooks";
 import { SidebarStyle } from "../components/Sidebar";
 import { css } from "@emotion/react";
 import { normalizeActions, normalizeStates, processEdges } from "../../shared/logs";
-import { IconPlus, IconX } from "@tabler/icons-react";
+import { IconCheck, IconCircleX, IconPlus, IconX } from "@tabler/icons-react";
 import { useMemo, useState } from "react";
 
 export function SceneView() {
-    const scenes = useScenes();
     const { sceneName } = useMatch("/scenes/:sceneName")?.params ?? {};
+    const scene = useScene(sceneName ?? "");
     const [disabled, setDisabled] = useState<string[]>([]);
-
-    const scene = scenes[sceneName ?? ""];
     if (!scene) return <div css={SidebarStyle}>Failed to find Scene</div>
 
     // Make sure that nodes transitioning out are at the bottom
     const innerConnections = scene.connections.filter((c) => c.target.scene === scene.name);
     const outgoingConnections = scene.connections.filter((c) => c.target.scene !== scene.name);
 
-    function deleteRedundantAndDisabled() {
-        const allSceneEdges = processEdges(scene.connections.flatMap((c) => c.edges), { disabled });
-        const edgesToDelete = allSceneEdges.filter((e) => e.status === "redundant").map((e) => e.key);
-        console.log(edgesToDelete);
-        ipcRenderer.send("deleteEdges", edgesToDelete);
-    }
+    // // Disabled until we're certain we want to delete these edges
+    // function deleteRedundantAndDisabled() {
+    //     const allSceneEdges = processEdges(scene.connections.flatMap((c) => c.edges), { disabled });
+    //     const edgesToDelete = allSceneEdges.filter((e) => e.status === "redundant").map((e) => e.key);
+    //     console.log(edgesToDelete);
+    //     ipcRenderer.send("deleteEdges", edgesToDelete);
+    // }
 
     return (
         <div css={SceneViewStyle}>
             <header>
                 <strong>{scene.name}</strong>
-                <a onClick={() => deleteRedundantAndDisabled()}>Delete Redundant and Disabled Edges</a>
+                {/*<a onClick={() => deleteRedundantAndDisabled()}>Delete Redundant and Disabled Edges</a>*/}
             </header>
             <div css={ConnectionListStyle}>
                 {innerConnections.map((n) =>
@@ -63,11 +62,14 @@ function ConnectionEntry(props: { connection: ConnectionData; scene?: string; di
                 const edgeDisabled = disabled.includes(edge.key);
                 const removeIcon = edgeDisabled
                     ? <IconPlus className="icon" size={14} onClick={() => setDisabled((current) => current.filter((c) => c !== edge.key))}/>
-                    : <IconX className="icon" size={14} onClick={() => setDisabled((current) => [...current, edge.key])}/>
+                    : <IconX className="icon" size={14} onClick={() => setDisabled((current) => [...current, edge.key])}/>;
+                const activeIcon = edge.status !== "active"
+                    ? <IconCheck size={14} onClick={() => ipcRenderer.send("updateEdgeStatus", edge.key, "active")} />
+                    : <IconCircleX size={14} onClick={() => ipcRenderer.send("updateEdgeStatus", edge.key, null)} />
 
                 return (
                     <div key={edge.key} css={EdgeStyle({ status: edge.status, disabled: edgeDisabled })}>
-                        {removeIcon}
+                        {activeIcon}
                         {edge.actions.size === 0 && edge.states.size === 0 ? <span>No actions or states required</span> : null}
                         {[...normalizeActions(edge.actions)].map((a) => <span key={a}>{a}</span>)}
                         {[...normalizeStates(edge)].map((s) => <span key={s}>{s}</span>)}
@@ -113,10 +115,13 @@ const EdgeStyle = (props: { status: EdgeData["status"], disabled: boolean }) => 
     span {
         white-space: nowrap;
     }
-    .icon {
+    svg {
         cursor: pointer;
         padding: 2px;
         flex: 0 0 min-content;
+        &:hover {
+            filter: drop-shadow(0 0 3px #000);
+        }
     }
 
     &:has(.icon:hover) {

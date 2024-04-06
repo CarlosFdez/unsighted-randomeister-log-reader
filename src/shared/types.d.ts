@@ -28,5 +28,7 @@ interface EdgeData {
     realTime: number;
     gameTime: number;
     timestamp: number;
-    status: "active" | "redundant";
+    status: EdgeStatus;
 }
+
+type EdgeStatus = null | "active" | "redundant";

@@ -75,7 +75,7 @@ class LogManager {
                 realTime: Number(data["real time"]),
                 gameTime: Number(data["game time"]),
                 timestamp: Number(data["timestamp"]),
-                status: "active",
+                status: null,
             }));
             const processed = processEdges(edgeObjects);
             const duplicates = getDuplicateEdges(processed, { exact: true });
