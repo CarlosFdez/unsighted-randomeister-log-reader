@@ -53,8 +53,10 @@ export function processEdges(edges: EdgeData[], options: { disabled?: string[] }
             // Find redundant edges in the group. Presort data so that higher gameTimes get marked off first
             const sortedGroup = R.sortBy(group, [(e) => e.gameTime, "desc"]);
             for (const edge of sortedGroup) {
-                // If this edge is set to active, don't update its status
-                if (edge.status === "active") continue;
+                // If this edge is manually verifieed, skip it
+                if (edge.status !== null && edge.status !== "redundant") {
+                    continue;
+                }
 
                 const actions = normalizeActions(edge.actions);
                 const states = normalizeStates(edge);

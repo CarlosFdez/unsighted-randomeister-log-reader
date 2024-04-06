@@ -3,13 +3,12 @@ import { ConnectionData, useScene } from "../hooks";
 import { SidebarStyle } from "../components/Sidebar";
 import { css } from "@emotion/react";
 import { normalizeActions, normalizeStates, processEdges } from "../../shared/logs";
-import { IconCheck, IconCircleX, IconPlus, IconX } from "@tabler/icons-react";
-import { useMemo, useState } from "react";
+import { IconCheck, IconCircleX, IconX } from "@tabler/icons-react";
+import { useMemo } from "react";
 
 export function SceneView() {
     const { sceneName } = useMatch("/scenes/:sceneName")?.params ?? {};
     const scene = useScene(sceneName ?? "");
-    const [disabled, setDisabled] = useState<string[]>([]);
     if (!scene) return <div css={SidebarStyle}>Failed to find Scene</div>
 
     // Make sure that nodes transitioning out are at the bottom
@@ -32,26 +31,26 @@ export function SceneView() {
             </header>
             <div css={ConnectionListStyle}>
                 {innerConnections.map((n) =>
-                    <ConnectionEntry key={n.key} connection={n} scene={scene.name} disabled={disabled} setDisabled={setDisabled} />
+                    <ConnectionEntry key={n.key} connection={n} scene={scene.name} />
                 )}
                 {innerConnections.length && outgoingConnections.length && <hr/>}
                 {outgoingConnections.map((n) =>
-                    <ConnectionEntry key={n.key} connection={n} scene={scene.name} disabled={disabled} setDisabled={setDisabled} />
+                    <ConnectionEntry key={n.key} connection={n} scene={scene.name} />
                 )}
             </div>
         </div>
     );
 }
 
-function ConnectionEntry(props: { connection: ConnectionData; scene?: string; disabled: string[], setDisabled: React.Dispatch<React.SetStateAction<string[]>> }) {
-    const { connection, disabled, setDisabled } = props;
+function ConnectionEntry(props: { connection: ConnectionData; scene?: string }) {
+    const { connection } = props;
     const sourceName = connection.source.scene === props.scene ? connection.source.location : connection.source.key;
     const targetName = connection.target.scene === props.scene ? connection.target.location : connection.target.key;
 
     // Mark disabled, and reprocess edges when disabled updates
     const edges = useMemo(() => {
-        return processEdges(connection.edges, { disabled });
-    }, [disabled, connection]);
+        return processEdges(connection.edges);
+    }, [connection]);
 
     return (
         <div css={ConnectionEntryStyle}>
@@ -59,16 +58,16 @@ function ConnectionEntry(props: { connection: ConnectionData; scene?: string; di
                 <strong>{sourceName}</strong> to <strong>{targetName}</strong>
             </header>
             {edges.map((edge) => {
-                const edgeDisabled = disabled.includes(edge.key);
-                const removeIcon = edgeDisabled
-                    ? <IconPlus className="icon" size={14} onClick={() => setDisabled((current) => current.filter((c) => c !== edge.key))}/>
-                    : <IconX className="icon" size={14} onClick={() => setDisabled((current) => [...current, edge.key])}/>;
+                const rejectIcon = edge.status !== "rejected"
+                    ? <IconX size={14} onClick={() => ipcRenderer.send("updateEdgeStatus", edge.key, "rejected")} />
+                    : <IconCircleX size={14} onClick={() => ipcRenderer.send("updateEdgeStatus", edge.key, null)} />
                 const activeIcon = edge.status !== "active"
                     ? <IconCheck size={14} onClick={() => ipcRenderer.send("updateEdgeStatus", edge.key, "active")} />
                     : <IconCircleX size={14} onClick={() => ipcRenderer.send("updateEdgeStatus", edge.key, null)} />
 
                 return (
-                    <div key={edge.key} css={EdgeStyle({ status: edge.status, disabled: edgeDisabled })}>
+                    <div key={edge.key} css={EdgeStyle({ status: edge.status })}>
+                        {rejectIcon}
                         {activeIcon}
                         {edge.actions.size === 0 && edge.states.size === 0 ? <span>No actions or states required</span> : null}
                         {[...normalizeActions(edge.actions)].map((a) => <span key={a}>{a}</span>)}
@@ -105,26 +104,22 @@ const ConnectionEntryStyle = css`
     }
 `;
 
-const EdgeStyle = (props: { status: EdgeData["status"], disabled: boolean }) => css`
-    opacity: ${props.disabled || props.status === "redundant" ? 0.6 : 1};
-    ${props.disabled ? "text-decoration: line-through;" : null}
+const EdgeStyle = (props: { status: EdgeData["status"] }) => css`
+    color: ${props.status === "rejected" ? "#300" : props.status === "active" ? "#003" : "#000"};
+    opacity: ${props.status === "redundant" ? 0.6 : 1};
     display: flex;
     align-items: center;
-    gap: 3px;
     font-size: 0.9em;
     span {
         white-space: nowrap;
+        margin-left: 3px;
     }
     svg {
         cursor: pointer;
-        padding: 2px;
+        padding: 2px 0;
         flex: 0 0 min-content;
         &:hover {
             filter: drop-shadow(0 0 3px #000);
         }
-    }
-
-    &:has(.icon:hover) {
-        ${props.disabled ? null : "text-decoration: line-through;"}
     }
 `;

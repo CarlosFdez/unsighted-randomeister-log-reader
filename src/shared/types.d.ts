@@ -31,4 +31,4 @@ interface EdgeData {
     status: EdgeStatus;
 }
 
-type EdgeStatus = null | "active" | "redundant";
+type EdgeStatus = null | "active" | "redundant" | "rejected";

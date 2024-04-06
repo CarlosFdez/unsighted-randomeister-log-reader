@@ -14,7 +14,7 @@ export function SceneList() {
                 <SceneListEntry key={s.name} scene={s} selected={sceneName === s.name}/>
             )}
         </div>
-    )
+    );
 }
 
 function SceneListEntry(props: { scene: SceneData, selected: boolean }) {
@@ -25,7 +25,7 @@ function SceneListEntry(props: { scene: SceneData, selected: boolean }) {
         item: { sceneName: scene.name }
     }));
 
-    const redundant = scene.edges.filter((e) => e.status === "redundant").length;
+    const unverified = scene.edges.filter((e) => e.status === null).length;
 
     return (
         <Link
@@ -40,7 +40,7 @@ function SceneListEntry(props: { scene: SceneData, selected: boolean }) {
             <span className="nodes">{scene.connections.length} Connections</span>
             <span className="nodes">
                 {scene.edges.length} Edges
-                {redundant > 0 && <span className="redundant">({redundant} Redundant)</span>}
+                {unverified > 0 && <span className="redundant">({unverified} Unverified)</span>}
             </span>
         </Link>
     );
