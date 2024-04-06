@@ -9,6 +9,8 @@ import { useMemo, useState } from "react";
 export function SceneView() {
     const scenes = useScenes();
     const { sceneName } = useMatch("/scenes/:sceneName")?.params ?? {};
+    const [disabled, setDisabled] = useState<string[]>([]);
+
     const scene = scenes[sceneName ?? ""];
     if (!scene) return <div css={SidebarStyle}>Failed to find Scene</div>
 
@@ -16,25 +18,38 @@ export function SceneView() {
     const innerConnections = scene.connections.filter((c) => c.target.scene === scene.name);
     const outgoingConnections = scene.connections.filter((c) => c.target.scene !== scene.name);
 
+    function deleteRedundantAndDisabled() {
+        const allSceneEdges = processEdges(scene.connections.flatMap((c) => c.edges), { disabled });
+        const edgesToDelete = allSceneEdges.filter((e) => e.status === "redundant").map((e) => e.key);
+        console.log(edgesToDelete);
+        ipcRenderer.send("deleteEdges", edgesToDelete);
+    }
+
     return (
         <div css={SceneViewStyle}>
-            <h3>{scene.name}</h3>
+            <header>
+                <strong>{scene.name}</strong>
+                <a onClick={() => deleteRedundantAndDisabled()}>Delete Redundant and Disabled Edges</a>
+            </header>
             <div css={ConnectionListStyle}>
-                {innerConnections.map((n) => <ConnectionEntry key={n.key} connection={n} scene={scene.name} />)}
+                {innerConnections.map((n) =>
+                    <ConnectionEntry key={n.key} connection={n} scene={scene.name} disabled={disabled} setDisabled={setDisabled} />
+                )}
                 {innerConnections.length && outgoingConnections.length && <hr/>}
-                {outgoingConnections.map((n) => <ConnectionEntry key={n.key} connection={n} scene={scene.name} />)}
+                {outgoingConnections.map((n) =>
+                    <ConnectionEntry key={n.key} connection={n} scene={scene.name} disabled={disabled} setDisabled={setDisabled} />
+                )}
             </div>
         </div>
     );
 }
 
-function ConnectionEntry(props: { connection: ConnectionData; scene?: string }) {
-    const connection = props.connection;
+function ConnectionEntry(props: { connection: ConnectionData; scene?: string; disabled: string[], setDisabled: React.Dispatch<React.SetStateAction<string[]>> }) {
+    const { connection, disabled, setDisabled } = props;
     const sourceName = connection.source.scene === props.scene ? connection.source.location : connection.source.key;
     const targetName = connection.target.scene === props.scene ? connection.target.location : connection.target.key;
 
     // Mark disabled, and reprocess edges when disabled updates
-    const [disabled, setDisabled] = useState<string[]>([]);
     const edges = useMemo(() => {
         return processEdges(connection.edges, { disabled });
     }, [disabled, connection]);
@@ -67,9 +82,13 @@ const SceneViewStyle = css`
     ${SidebarStyle}
     display: flex;
     flex-direction: column;
-    h3 {
+    & > header {
         margin-top: 0;
         padding: 4px 6px;
+        strong {
+            display: block;
+            font-size: 1.25em;
+        }
     }
 `;
 

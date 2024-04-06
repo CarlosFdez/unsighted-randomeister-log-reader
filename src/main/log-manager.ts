@@ -93,7 +93,7 @@ class LogManager {
 
     /** Delete edges using their uuids */
     deleteEdges(edgeKeys: Set<string>) {
-        this.data.edges = this.data.edges.filter((e) => !edgeKeys.has(e.key));
+        this.data.edges = processEdges(this.data.edges.filter((e) => !edgeKeys.has(e.key)));
     }
 
     async save() {

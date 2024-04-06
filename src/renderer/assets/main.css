@@ -29,3 +29,11 @@ html, body {
     border-radius: 1px;
     border: 1px solid #00000066;
 }
+
+a {
+    cursor: pointer;
+    color: #005;
+    &:hover {
+        text-shadow: 0 0 5px #00005533;
+    }
+}

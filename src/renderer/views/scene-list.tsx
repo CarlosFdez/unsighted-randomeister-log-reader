@@ -8,7 +8,7 @@ export function SceneList() {
     const scenes = useScenes();
     const { sceneName } = useMatch("/scenes/:sceneName")?.params ?? {};
     return (
-        <div css={SidebarStyle}>
+        <div css={SceneListSidebarStyle}>
             <ScrollRestoration />
             {Object.values(scenes).map((s) =>
                 <SceneListEntry key={s.name} scene={s} selected={sceneName === s.name}/>
@@ -45,6 +45,12 @@ function SceneListEntry(props: { scene: SceneData, selected: boolean }) {
         </Link>
     );
 }
+
+const SceneListSidebarStyle = css`
+    ${SidebarStyle}
+    flex: 0 0 min-content;
+    white-space: nowrap;
+`;
 
 const SceneListEntryStyle = css`
     display: flex;

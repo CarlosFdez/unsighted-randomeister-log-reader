@@ -56,4 +56,8 @@ const PropertiesStyle = css`
     margin: 8px;
     margin-left: auto;
     justify-content: space-between;
+    pointer-events: none;
+    * {
+        pointer-events: all;
+    }
 `;

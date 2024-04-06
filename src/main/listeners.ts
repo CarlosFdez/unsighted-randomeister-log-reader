@@ -13,6 +13,12 @@ ipcMain.on("reload", async () => {
     }
 });
 
+ipcMain.on("deleteEdges", (event, edges: string[]) => {
+    console.log(edges);
+    logManager.deleteEdges(new Set(edges));
+    event.reply("updateLogs", logManager.data);
+});
+
 ipcMain.handle("getLogs", async (_event) => {
     return logManager.data;
 });
