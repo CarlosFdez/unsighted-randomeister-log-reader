@@ -1,6 +1,7 @@
 import { ipcMain } from "electron";
 import { DEFAULT_LOGS, getDuplicateEdges, processEdges } from "../shared/logs";
 import { parse } from "csv-parse/sync";
+import { stringify } from "csv-stringify/sync";
 import fs from "node:fs/promises";
 import * as path from "node:path";
 import { randomUUID } from "crypto";
@@ -75,7 +76,7 @@ class LogManager {
                 realTime: Number(data["real time"]),
                 gameTime: Number(data["game time"]),
                 timestamp: Number(data["timestamp"]),
-                status: null,
+                status: (String(data["status"] ?? "") || null) as EdgeStatus,
             }));
             const processed = processEdges(edgeObjects);
             const duplicates = getDuplicateEdges(processed, { exact: true });
@@ -96,9 +97,58 @@ class LogManager {
         this.data.edges = processEdges(this.data.edges.filter((e) => !edgeKeys.has(e.key)));
     }
 
-    async save() {
-        const output = JSON.stringify(this.data, null, "\t");
-        return fs.writeFile("data/output.json", output, { encoding: "utf-8" });
+    async save(base = "data", logs = this.data) {
+        const actions = [...logs.actions].map((action, idx) => ({ id: idx, action }));
+        const states = [...logs.states].map((state, idx) => {
+            const [scene, name] = state.includes("/") ? state.split("/", 2) : ["", state];
+            return { id: idx, name, scene };
+        });
+        const nodes = Object.values(logs.nodes).map((node, idx) => {
+            return {
+                id: idx,
+                scene: node.scene,
+                location: node.location,
+                x: node.x,
+                y: node.y,
+                height: node.height,
+            };
+        });
+        const edges = logs.edges.map((edge) => ({
+            source: nodes.find((n) => [n.scene, n.location].join("/") === edge.sourceNode)!.id,
+            target: nodes.find((n) => [n.scene, n.location].join("/") === edge.targetNode)!.id,
+            actions: [...edge.actions]
+                .map((name) => actions.find((a) => a.action === name)!.id)
+                .join(","),
+            states: [...edge.states]
+                .map(
+                    (name) =>
+                        states.find(
+                            (s) => R.filter([s.scene, s.name], R.isTruthy).join("/") === name,
+                        )!.id,
+                )
+                .join(","),
+            "scene change": edge.sceneChange ? "1" : "0",
+            "real time": edge.realTime,
+            "game time": edge.gameTime,
+            timestamp: edge.timestamp,
+            status: edge.status,
+        }));
+
+        writeTsv(`${base}/actions.tsv`, actions, ["id", "action"]);
+        writeTsv(`${base}/states.tsv`, states, ["id", "name", "scene"]);
+        writeTsv(`${base}/nodes.tsv`, nodes, ["id", "scene", "location", "x", "y", "height"]);
+        writeTsv(`${base}/edges.tsv`, edges, [
+            "source",
+            "target",
+            "actions",
+            "states",
+            "scene change",
+            "real time",
+            "game time",
+            "timestamp",
+            "status",
+        ]);
+        console.log("Write Complete");
     }
 
     mergeLog() {}
@@ -111,8 +161,22 @@ async function readTsv(filePath: string): Promise<Record<string, string>[] | nul
             delimiter: "\t",
             columns: true,
         });
-    } catch {
+    } catch (ex) {
+        console.error(String(ex));
         return null;
+    }
+}
+
+async function writeTsv(filePath: string, records: Record<string, unknown>[], columns: string[]) {
+    try {
+        const data = stringify(records, {
+            header: true,
+            columns,
+            delimiter: "\t",
+        });
+        await fs.writeFile(filePath, data, "utf-8");
+    } catch (ex) {
+        console.error(String(ex));
     }
 }
 

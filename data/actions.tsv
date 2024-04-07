@@ -51,7 +51,6 @@ id	action
 49	StandOnBarrier
 50	Run
 51	RunningJump
-52	ChangeDirectionDuringJump
 52	CurvedJump
 53	BigCurvedJump
 54	ClimbSlash
