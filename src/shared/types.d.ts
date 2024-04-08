@@ -5,6 +5,7 @@ interface LogData {
     /** Nodes mapped by key */
     nodes: Record<string, NodeData>;
     edges: EdgeData[];
+    ignoredConnections: IgnoredConnection[];
 }
 
 interface NodeData {
@@ -29,6 +30,12 @@ interface EdgeData {
     gameTime: number;
     timestamp: number;
     status: EdgeStatus;
+}
+
+/** Identifies a connection that we are not interested in the edges for */
+interface IgnoredConnection {
+    sourceNode: string;
+    targetNode: string;
 }
 
 type EdgeStatus = null | "active" | "redundant" | "rejected";

@@ -4,6 +4,9 @@ import { electronApp, optimizer, is } from "@electron-toolkit/utils";
 import icon from "../../resources/icon.png?asset";
 import { menu } from "./menu";
 
+// Makes error reports report the correct line number
+import "source-map-support/register";
+
 import "./listeners";
 
 function createWindow(): void {

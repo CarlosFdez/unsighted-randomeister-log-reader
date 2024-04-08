@@ -13,6 +13,9 @@ export default defineConfig({
         plugins: [externalizeDepsPlugin()],
     },
     renderer: {
+        build: {
+            sourcemap: true,
+        },
         resolve: {
             alias: {
                 "@renderer": resolve("src/renderer"),

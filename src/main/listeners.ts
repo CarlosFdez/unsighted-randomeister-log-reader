@@ -3,8 +3,6 @@ import { LogManager } from "./log-manager";
 import { processEdges } from "../shared/logs";
 
 const logManager = LogManager.instance;
-const test = ipcMain;
-console.log(test);
 
 ipcMain.on("reload", async () => {
     try {
@@ -23,6 +21,32 @@ ipcMain.on("updateEdgeStatus", (event, edgeId, status: EdgeStatus) => {
         event.reply("updateLogs", logManager.data);
     }
 });
+
+ipcMain.on(
+    "ignoreConnection",
+    (event, options: { sourceNode: string; targetNode: string; ignored?: boolean }) => {
+        const ignored = options.ignored ?? true;
+        const { sourceNode, targetNode } = options;
+        const logs = logManager.data;
+
+        if (!logs.nodes[sourceNode] || !logs.nodes[targetNode]) {
+            console.error("ignoreConnection requires a source node and target node that exists");
+            return;
+        }
+
+        const existing = logs.ignoredConnections.findIndex(
+            (c) => c.sourceNode === sourceNode && c.targetNode === targetNode,
+        );
+        console.log(options, logs.ignoredConnections, existing, ignored);
+        if (existing > -1 && !ignored) {
+            logs.ignoredConnections.splice(existing, 1);
+            event.reply("updateLogs", logs);
+        } else if (existing === -1 && ignored) {
+            logs.ignoredConnections.push({ sourceNode, targetNode });
+            event.reply("updateLogs", logs);
+        }
+    },
+);
 
 ipcMain.on("deleteEdges", (event, edges: string[]) => {
     console.log(edges);

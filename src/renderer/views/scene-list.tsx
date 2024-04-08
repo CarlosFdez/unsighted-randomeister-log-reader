@@ -26,6 +26,7 @@ function SceneListEntry(props: { scene: SceneData, selected: boolean }) {
     }));
 
     const unverified = scene.edges.filter((e) => e.status === null).length;
+    const ignoredConnection = scene.connections.filter((c) => c.ignored).length;
 
     return (
         <Link
@@ -37,10 +38,13 @@ function SceneListEntry(props: { scene: SceneData, selected: boolean }) {
             <span className="name" ref={drag}>
                 {scene.name}
             </span>
-            <span className="nodes">{scene.connections.length} Connections</span>
+            <span className="nodes">
+                {scene.connections.length - ignoredConnection} Connections
+                {ignoredConnection > 0 ? <span className="info">({ignoredConnection} ignored)</span> : null}
+            </span>
             <span className="nodes">
                 {scene.edges.length} Edges
-                {unverified > 0 && <span className="redundant">({unverified} Unverified)</span>}
+                {unverified > 0 ? <span className="info redundant">({unverified} unverified)</span> : null}
             </span>
         </Link>
     );
@@ -68,10 +72,12 @@ const SceneListEntryStyle = css`
     .nodes {
         display: block;
     }
+    .info {
+        font-size: 0.95em;
+        margin-left: 0.5ch;
+    }
     .redundant {
         color: #AA0000;
         font-weight: 500;
-        font-size: 0.95em;
-        margin-left: 0.5ch;
     }
 `;

@@ -12,7 +12,7 @@
     "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
     "typecheck": "npm run typecheck:node && npm run typecheck:web",
     "start": "electron-vite preview",
-    "dev": "electron-vite dev --watch --sourcemap",
+    "dev": "electron-vite dev --watch",
     "build": "npm run typecheck && electron-vite build",
     "postinstall": "electron-builder install-app-deps",
     "build:unpack": "npm run build && electron-builder --dir",
@@ -31,7 +31,8 @@
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
     "react-router-dom": "^6.22.3",
-    "remeda": "^1.56.0"
+    "remeda": "^1.56.0",
+    "source-map-support": "^0.5.21"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config-prettier": "^2.0.0",
@@ -46,6 +47,7 @@
     "electron-vite": "^2.0.0",
     "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^3.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

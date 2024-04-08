@@ -12,7 +12,6 @@
     "jsxImportSource": "@emotion/react",
     "baseUrl": ".",
     "noImplicitAny": true,
-    "sourceMap": true,
     "paths": {
       "@renderer/*": [
         "src/renderer/*"

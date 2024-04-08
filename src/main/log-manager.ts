@@ -33,6 +33,7 @@ class LogManager {
         const rawStates = await readTsv(path.join(base, "states.tsv"));
         const rawNodes = await readTsv(path.join(base, "nodes.tsv"));
         const rawEdges = await readTsv(path.join(base, "edges.tsv"));
+        const ignoredConnections = (await readTsv(path.join(base, "ignoredConnections.tsv"))) ?? [];
 
         if (!rawActions || !rawStates || !rawNodes || !rawEdges) {
             throw new Error("Failed to read unsighted logs, this isn't a valid logs folder");
@@ -89,6 +90,12 @@ class LogManager {
             states: new Set(Object.values(statesById)),
             nodes: R.mapToObj(Object.values(nodesById), (n) => [n.key, n]),
             edges,
+            ignoredConnections: ignoredConnections?.map(
+                (data): IgnoredConnection => ({
+                    sourceNode: nodesById[data.source].key,
+                    targetNode: nodesById[data.target].key,
+                }),
+            ),
         };
     }
 
@@ -113,9 +120,12 @@ class LogManager {
                 height: node.height,
             };
         });
+
+        const getNode = (key: string) => nodes.find((n) => [n.scene, n.location].join("/") === key);
+
         const edges = logs.edges.map((edge) => ({
-            source: nodes.find((n) => [n.scene, n.location].join("/") === edge.sourceNode)!.id,
-            target: nodes.find((n) => [n.scene, n.location].join("/") === edge.targetNode)!.id,
+            source: getNode(edge.sourceNode)!.id,
+            target: getNode(edge.targetNode)!.id,
             actions: [...edge.actions]
                 .map((name) => actions.find((a) => a.action === name)!.id)
                 .join(","),
@@ -133,6 +143,10 @@ class LogManager {
             timestamp: edge.timestamp,
             status: edge.status,
         }));
+        const ignoredConnections = logs.ignoredConnections.map((c) => ({
+            source: getNode(c.sourceNode)!.id,
+            target: getNode(c.targetNode)!.id,
+        }));
 
         writeTsv(`${base}/actions.tsv`, actions, ["id", "action"]);
         writeTsv(`${base}/states.tsv`, states, ["id", "name", "scene"]);
@@ -148,6 +162,7 @@ class LogManager {
             "timestamp",
             "status",
         ]);
+        writeTsv(`${base}/ignoredConnections.tsv`, ignoredConnections, ["source", "target"]);
         console.log("Write Complete");
     }
 
