@@ -30,6 +30,8 @@ interface EdgeData {
     gameTime: number;
     timestamp: number;
     status: EdgeStatus;
+    /** If this edge is part of an ignored connection, the edge will be marked as ignored */
+    ignored: boolean;
 }
 
 /** Identifies a connection that we are not interested in the edges for */

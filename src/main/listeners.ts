@@ -34,15 +34,7 @@ ipcMain.on(
             return;
         }
 
-        const existing = logs.ignoredConnections.findIndex(
-            (c) => c.sourceNode === sourceNode && c.targetNode === targetNode,
-        );
-        console.log(options, logs.ignoredConnections, existing, ignored);
-        if (existing > -1 && !ignored) {
-            logs.ignoredConnections.splice(existing, 1);
-            event.reply("updateLogs", logs);
-        } else if (existing === -1 && ignored) {
-            logs.ignoredConnections.push({ sourceNode, targetNode });
+        if (logManager.updateConnectionStatus(sourceNode, targetNode, ignored)) {
             event.reply("updateLogs", logs);
         }
     },

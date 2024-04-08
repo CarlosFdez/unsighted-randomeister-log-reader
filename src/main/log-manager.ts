@@ -33,7 +33,8 @@ class LogManager {
         const rawStates = await readTsv(path.join(base, "states.tsv"));
         const rawNodes = await readTsv(path.join(base, "nodes.tsv"));
         const rawEdges = await readTsv(path.join(base, "edges.tsv"));
-        const ignoredConnections = (await readTsv(path.join(base, "ignoredConnections.tsv"))) ?? [];
+        const rawIgnoredConnections =
+            (await readTsv(path.join(base, "ignoredConnections.tsv"))) ?? [];
 
         if (!rawActions || !rawStates || !rawNodes || !rawEdges) {
             throw new Error("Failed to read unsighted logs, this isn't a valid logs folder");
@@ -54,6 +55,13 @@ class LogManager {
                 ...R.mapValues(R.pick(n, ["x", "y", "height"] as const), Number),
             },
         ]);
+
+        const ignoredConnections = rawIgnoredConnections.map(
+            (data): IgnoredConnection => ({
+                sourceNode: nodesById[data.source].key,
+                targetNode: nodesById[data.target].key,
+            }),
+        );
 
         const edges = (() => {
             const edgeObjects = rawEdges.map<EdgeData>((data) => ({
@@ -78,8 +86,9 @@ class LogManager {
                 gameTime: Number(data["game time"]),
                 timestamp: Number(data["timestamp"]),
                 status: (String(data["status"] ?? "") || null) as EdgeStatus,
+                ignored: false,
             }));
-            const processed = processEdges(edgeObjects);
+            const processed = processEdges(edgeObjects, { ignored: ignoredConnections });
             const duplicates = getDuplicateEdges(processed, { exact: true });
             const duplicateKeys = new Set(duplicates.map((e) => e.key));
             return processed.filter((e) => !duplicateKeys.has(e.key));
@@ -90,18 +99,31 @@ class LogManager {
             states: new Set(Object.values(statesById)),
             nodes: R.mapToObj(Object.values(nodesById), (n) => [n.key, n]),
             edges,
-            ignoredConnections: ignoredConnections?.map(
-                (data): IgnoredConnection => ({
-                    sourceNode: nodesById[data.source].key,
-                    targetNode: nodesById[data.target].key,
-                }),
-            ),
+            ignoredConnections,
         };
     }
 
     /** Delete edges using their uuids */
     deleteEdges(edgeKeys: Set<string>) {
         this.data.edges = processEdges(this.data.edges.filter((e) => !edgeKeys.has(e.key)));
+    }
+
+    updateConnectionStatus(sourceNode: string, targetNode: string, ignored: boolean): boolean {
+        const logs = this.data;
+        const existing = logs.ignoredConnections.findIndex(
+            (c) => c.sourceNode === sourceNode && c.targetNode === targetNode,
+        );
+        if (existing > -1 && !ignored) {
+            logs.ignoredConnections.splice(existing, 1);
+            logs.edges = processEdges(logs.edges, { ignored: logs.ignoredConnections });
+            return true;
+        } else if (existing === -1 && ignored) {
+            logs.ignoredConnections.push({ sourceNode, targetNode });
+            logs.edges = processEdges(logs.edges, { ignored: logs.ignoredConnections });
+            return true;
+        }
+
+        return false;
     }
 
     async save(base = "data", logs = this.data) {

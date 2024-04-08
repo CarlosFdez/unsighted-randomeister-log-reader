@@ -25,7 +25,7 @@ function SceneListEntry(props: { scene: SceneData, selected: boolean }) {
         item: { sceneName: scene.name }
     }));
 
-    const unverified = scene.edges.filter((e) => e.status === null).length;
+    const unverified = scene.edges.filter((e) => e.status === null && !e.ignored).length;
     const ignoredConnection = scene.connections.filter((c) => c.ignored).length;
 
     return (

@@ -38,16 +38,26 @@ export function normalizeStates(edge: EdgeData): Set<string> {
  * 1) The actions after filtering are a superset of this edge's
  * 2) The states after normalization are a subset of this edge
  */
-export function processEdges(edges: EdgeData[], options: { disabled?: string[] } = {}): EdgeData[] {
+export function processEdges(
+    edges: EdgeData[],
+    options: { disabled?: string[]; ignored?: IgnoredConnection[] } = {},
+): EdgeData[] {
     const disabled = options.disabled ?? [];
+    const ignoredGroups = new Set(options.ignored?.map((i) => `${i.sourceNode}|${i.targetNode}`));
+
     return R.pipe(
         R.clone(edges),
         R.groupBy((edge) => `${edge.sourceNode}|${edge.targetNode}`),
-        R.values,
-        R.flatMap((group) => {
-            // Set all redundant edges to unverified first, unless its disabled
-            for (const edge of group.filter((e) => e.status === "redundant")) {
-                edge.status = !disabled.includes(edge.key) ? null : "redundant";
+        R.entries.strict,
+        R.flatMap(([key, group]: [string, EdgeData[]]) => {
+            // Pre-pass, update ignored state and possibly status
+            for (const edge of group) {
+                edge.ignored = options.ignored ? ignoredGroups.has(key) : edge.ignored;
+
+                // Set redundant edges to unverified, unless its disabled
+                if (edge.status === "redundant") {
+                    edge.status = !disabled.includes(edge.key) ? null : "redundant";
+                }
             }
 
             // Find redundant edges in the group. Presort data so that higher gameTimes get marked off first

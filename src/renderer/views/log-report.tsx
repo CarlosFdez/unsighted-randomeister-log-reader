@@ -5,17 +5,21 @@ import { getDuplicateEdges } from "../../shared/logs";
 export function LogReport(props: { logs: LogData }) {
     const logs = props.logs;
     const nodeList = Object.values(logs.nodes);
-    const connections = R.uniqueBy(logs.edges, (e) => `${e.sourceNode}-${e.targetNode}`).length;
-    const redundant = R.sumBy(logs.edges, (e) => e.status === "redundant" ? 1 : 0);
+    const connections = R.uniqueBy([...logs.edges, ...logs.ignoredConnections], (e) => `${e.sourceNode}-${e.targetNode}`).length;
     const logicalDuplicates = getDuplicateEdges(logs.edges, { exact: false })
+    const activeEdges = logs.edges.filter((e) => !e.ignored);
 
     return (
         <div css={ReportStyle}>
             <div>Total Nodes: {nodeList.length}</div>
-            <div>Active Edges: {logs.edges.length - redundant}</div>
-            <div>Redundant Edges: {redundant}</div>
+            <div>Connections: {connections - logs.ignoredConnections.length}</div>
+            <hr/>
+            <div>Approved Edges: {R.filter(activeEdges, (e) => e.status === "active").length}</div>
+            <div>Redundant Edges: {R.filter(activeEdges, (e) => e.status === "redundant").length}</div>
+            <div>Unverified Edges: {R.filter(activeEdges, (e) => e.status === null).length}</div>
+            <div>Ignored Edges: {logs.edges.length - activeEdges.length}</div>
+            <hr/>
             <div>Logical Duplicates: {logicalDuplicates.length}</div>
-            <div>Connections: {connections}</div>
         </div>
     );
 }
@@ -26,6 +30,11 @@ const ReportStyle = css`
     color: white;
     padding: 8px;
     z-index: 1;
+
+    hr {
+        border-color: #aaa;
+        margin: 0.25rem 0;
+    }
 
     div {
         white-space: nowrap;
