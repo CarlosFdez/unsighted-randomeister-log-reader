@@ -129,11 +129,7 @@ export function getDuplicateEdges(edges: EdgeData[], { exact = false } = {}): Ed
         }),
         R.values,
         R.filter((g) => g.length > 1),
-        R.map((g) => {
-            // Return all redundants in this group....but *just in case* make sure its never the whole group
-            const redundant = g.filter((g) => g.status === "redundant");
-            return redundant.length === g.length ? redundant.slice(1) : redundant;
-        }),
+        R.map((g) => g.slice(1)),
     ).flat();
 }
 
@@ -142,4 +138,5 @@ export const DEFAULT_LOGS: LogData = {
     states: new Set(),
     edges: [],
     nodes: {},
+    ignoredConnections: [],
 };
