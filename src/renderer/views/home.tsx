@@ -7,6 +7,8 @@ import { LogReport } from "./log-report";
 import { css } from "@emotion/react";
 import { SceneList } from "./scene-list";
 import { DEFAULT_LOGS } from "../../shared/logs";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export function HomeView() {
     const [logs, setLogs] = useState<LogData>(DEFAULT_LOGS);
@@ -31,6 +33,7 @@ export function HomeView() {
                 </div>
             </div>
             <ScrollRestoration />
+            <ToastContainer position="bottom-center" />
         </LogsContext.Provider>
     );
 }

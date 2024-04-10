@@ -49,8 +49,3 @@ ipcMain.on("deleteEdges", (event, edges: string[]) => {
 ipcMain.handle("getLogs", async (_event) => {
     return logManager.data;
 });
-
-ipcMain.handle("save", async () => {
-    await logManager.save();
-    return true;
-});

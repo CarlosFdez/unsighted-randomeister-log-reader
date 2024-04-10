@@ -12,7 +12,10 @@ type Destructor = () => void;
 const globals = {
     /** Expose a subset of ipcRenderer functions to the process */
     ipcRenderer: {
-        ...R.pick(ipcRenderer, ["invoke", "on", "once", "removeListener", "send"]),
+        on<T>(channel: string, callback: (evt: IpcRendererEvent, data: T) => void): Destructor {
+            ipcRenderer.on(channel, callback);
+            return () => ipcRenderer.off(channel, callback);
+        },
     },
     unsighted: {
         /**
@@ -21,7 +24,9 @@ const globals = {
          * @returns a function that can be called to unregister
          */
         receiveLogs(callback: (logs: LogData) => void): Destructor {
-            const off = on("updateLogs", (_, data) => callback(data as LogData));
+            const off = globals.ipcRenderer.on("updateLogs", (_, data) =>
+                callback(data as LogData),
+            );
             ipcRenderer.invoke("getLogs").then((logs) => {
                 callback(logs);
             });
@@ -29,10 +34,5 @@ const globals = {
         },
     },
 };
-
-function on<T>(channel: string, callback: (evt: IpcRendererEvent, data: T) => void): Destructor {
-    ipcRenderer.on(channel, callback);
-    return () => ipcRenderer.off(channel, callback);
-}
 
 export { globals };

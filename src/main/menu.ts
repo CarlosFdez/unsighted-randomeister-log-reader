@@ -18,9 +18,8 @@ const menu = Menu.buildFromTemplate([
                     if (!path) return;
 
                     try {
-                        console.log(logManager.data);
                         const logs = await logManager.readLogs(path);
-                        ipcMain.emit("handleImport", logs);
+                        console.log(logs);
                     } catch (ex) {
                         const message = ex instanceof Error ? ex.message : "Failed to read logs";
                         dialog.showErrorBox("Error", message);
@@ -30,8 +29,9 @@ const menu = Menu.buildFromTemplate([
             {
                 label: "Save",
                 accelerator: "CTRL+S",
-                click: async () => {
+                click: async (_, window) => {
                     await logManager.save();
+                    window?.webContents.send("notification", { content: "Save successful" });
                 },
             },
         ],
