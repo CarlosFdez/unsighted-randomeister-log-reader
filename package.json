@@ -28,6 +28,7 @@
     "csv-parse": "^5.5.5",
     "csv-stringify": "^6.4.6",
     "electron-updater": "^6.1.7",
+    "minisearch": "^6.3.0",
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
     "react-router-dom": "^6.22.3",
